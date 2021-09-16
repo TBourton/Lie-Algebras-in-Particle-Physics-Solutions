@@ -1,0 +1,102 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
+
+\subsection{Check explicitly that mass terms for the $e^-$ and $u,d$ quarks are allowed in the $\mathfrak{su}(2)\times\mathfrak{u}(1)$ Higgs model}
+$[R_a,\phi_r^{\dagger}]=\phi_s^{\dagger}[\sigma_a]_{sr}/2$, $[S,\phi_r^{\dagger}]=\phi_r^{\dagger}/2$. Higgs can "produce" a mass via SSB provided the tensor product of a RH particle and a RH anti-particle $\ni$ Higgs rep $(1,2)_{1/2}$ or its conjugate rep. For a RH electron 
+\begin{align}
+(1,1)_{-1}\otimes(1,2)_{1/2}=(1,2)_{-1/2}
+\end{align}
+But, as $2=\overline{2}$ for $\mathfrak{su}(2)$, so that $(1,2)_{-1/2}=(1,\overline{2})_{-1/2}=\overline{(1,2)_{1/2}}$ which is the conjugate Higgs rep.
+
+For $u$ quark, using $\overline{3}\otimes3=8\oplus1$
+\begin{equation}
+(3,1)_{2/3}\otimes(\overline{3},2)_{-1/6}=(8,2)_{1/2}\oplus(1,2)_{1/2}
+\end{equation}
+which therefore contains the Higgs rep.
+
+For the $d$ quarks
+\begin{equation}
+(3,1)_{-1/3}\otimes(\overline{3},2)_{-1/6}=(8,2)_{-1/2}\oplus(1,2)_{-1/2}=(8,2)_{-1/2}\oplus\overline{(1,2)_{1/2}}
+\end{equation}
+Which therefore contains the conjugate Higgs rep.
+
+\subsection{Find the symmetric tensor product $\left((3,1)_{-1/3}\oplus(1,2)_{1/2}\right)$ with itself}
+
+\begin{equation}
+\left((3,1)_{-1/3}\oplus(1,2)_{1/2}\right)\oplus_{sym}\left((3,1)_{-1/3}\oplus(1,2)_{1/2}\right)
+\end{equation}
+
+In $\mathfrak{su}(3)$
+\begin{align}
+3\otimes3&=6\oplus\overline{3}\\
+&=\yng(2)\oplus\yng(1,1)\\
+&=\text{Sym}\oplus\text{AntiSym.}
+\end{align}
+
+\begin{align}
+3\otimes\overline{3}&=1\oplus8\\
+&=\yng(1,1,1)\oplus\yng(2,1)\\
+&=\text{AntiSym}\oplus\text{AntiSym.}
+\end{align}
+
+In $\mathfrak{su}(2)$
+\begin{align}
+2\otimes2&=3\oplus1\\
+&=\yng(2)\oplus\yng(1,1)\\
+&=\text{Sym}\oplus\text{AntiSym.}
+\end{align}
+
+So 
+\begin{equation}
+\left((3,1)_{-1/3}\oplus(1,2)_{1/2}\right)\otimes_{sym}\left((3,1)_{-1/3}\oplus(1,2)_{1/2}\right)=(6,1)_{-2/3}+(3,2)_{1/6}+(1,3)_{1}
+\end{equation}
+
+\subsection{Find the symmetric tensor product $\left((3,1)_{2/3}\oplus(1,1)_{-1}\oplus(\overline{3},2)_{-1/6}\right)$ with itself}
+
+\begin{align}
+&\left((3,1)_{2/3}\oplus(1,1)_{-1}\oplus(\overline{3},2)_{-1/6}\right)\otimes_{sym}\left((3,1)_{2/3}\oplus(1,1)_{-1}\oplus(\overline{3},2)_{-1/6}\right)\nonumber\\
+&=(6,1)_{4/3}\oplus(1,1)_{-2}\oplus(3,1)_{-1/3}\oplus(\overline{3},2)_{-7/6}\oplus(\overline{6},1)_{-1/3}\oplus(3,3)_{-1/3}.
+\end{align}
+
+\subsection{Show that if the operator $O=\overline{e}^{\dagger}\epsilon^{abc}u_au_bd_c$ appears in the Hamiltonian it has the correct charge and color properties to allow $P\rightarrow\pi^0e^+$ decay.}
+\begin{align}
+&\left|P\right>\rightarrow\left|\pi^0e^+\right>\\
+&\left|uud\right>\rightarrow\frac{1}{\sqrt{2}}\left(\left|u\overline{u}\right>-\left|d\overline{d}\right>\right)\otimes\left|e^+\right>
+\end{align}
+
+$O$ transforms under the $(1,1)_{-1}$ representation. It is therefore colorless transforming trivially under $\mathfrak{su}(3)_c$ and it can therefore couple to the colorless proton, likewise the  $\left|\pi^0e^+\right>$ state is also colorless.
+Applying the charge operator $Q$ to the states
+\begin{align}
+Q\left|P\right>=&+1\left|P\right>\\
+Q\left|\pi^0e^+\right>=&+1\left|\pi^0e^+\right>\\
+QO=&+1-\frac{2}{3}-\frac{2}{3}+\frac{1}{3}=0.
+\end{align}
+Thus $O$ is chargeless as required then $O\left|P\right>\rightarrow\left|\pi^0e^+\right>$ is allowed because in $\mathfrak{su}(5)$, $u,d\in$ the same rep. as $e^+$, which is not true in the standard model $\mathfrak{su}(3)\times\mathfrak{su}(2)\times\mathfrak{u}(1)$ theory.
+
+
+\subsection{How do the $45$ and $50$ of $\mathfrak{su}(5)$ transform under $\mathfrak{su}(3)\otimes\mathfrak{su}(2)\otimes\mathfrak{u}(1)$ subgroup?}
+It is easier to work with the conjugate representations and then conjugate again at the end. Under $\mathfrak{su}(5)\rightarrow\mathfrak{su}(3)\times\mathfrak{su}(2)\times\mathfrak{u}(1)$ 
+\begin{equation}\label{eq:45decomp}
+\begin{split}
+\overline{45}=\yng(2,1,1)\rightarrow&(\yng(2,1,1),\bullet)\oplus(\yng(2,1),\yng(1))\oplus(\yng(1,1,1),\yng(1))\oplus(\yng(1,1),\yng(1,1))\\
+&\oplus(\yng(1,1),\yng(2))\oplus(\yng(2),\yng(1,1))\oplus(\yng(1),\yng(2,1)).
+\end{split}
+\end{equation}
+Taking the conjugate of \eqref{eq:45decomp} gives
+\begin{align}
+45=\yng(2,2,1,1)\rightarrow&(\overline{3},1)\oplus(8,2)\oplus(1,2)\oplus(3,1)\oplus(3,3)\oplus(\overline{6},1)\oplus(\overline{3},2).
+\end{align}
+
+For the $50$
+\begin{equation}
+\begin{split}
+\overline{50}=\yng(2,2)\rightarrow&(\yng(2,2),\bullet)\oplus(\yng(2,1),\yng(1))\oplus(\yng(1),\yng(2,1))\oplus(\yng(1,1),\yng(1,1))\\
+&\oplus(\yng(1,1),\yng(2))\oplus(\bullet,\yng(2,2)).
+\end{split}
+\end{equation}
+
+Taking the conjugate gives
+\begin{align}
+50\rightarrow&(6,1)\oplus(8,2)\oplus(\overline{3},1)\oplus(3,1)\oplus(3,3)\oplus(1,1).
+\end{align}
+\end{document}

@@ -1,0 +1,136 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
+
+\subsection{What does the Gell-Mann-Okubo argument say about the masses of particles transforming like a $6$ of $\mathfrak{su}(3)$}
+Now the particles transform as a $6$ and the states can be described by the tensor $S^{ij}\left|_{ij}\right>$. Whereas particles transforming like an $8$ has two independent contributions, because $8\otimes8\ni...\oplus8\oplus8\oplus..$. But now we have only one independent tensor contribution to the matrix element $\left<S|H_{MS}|S\right>$ because $8\otimes6=15\oplus24\oplus3\oplus6$ contains only one $6$ for the $\overline{6}$ to couple to. This contribution is
+\begin{equation}
+\overline{S}_{ij}[T_8]^j_kS^{ki}=\Tr{(S^{\dagger}T_8S)}.
+\end{equation}
+The $6$ particles, which are quark bilinears, would look something like
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\draw[->] (0,-3) -- (0,2) node[right] {$H_2$};
+\draw[->] (-2,0) -- (2,0) node[right] {$H_1$};
+\filldraw[black] (2,1.15) circle (2pt) node[right, black] {$ A^+$};
+\filldraw[black] (-2,1.15) circle (2pt) node[left, black] {$ A^-$};
+\filldraw[black] (1,-0.577) circle (2pt) node[right, black] {$ B^+$};
+\filldraw[black] (0,1.15) circle (2pt) node[right, black] {$ A^0$};
+\filldraw[black] (0,-2.3) circle (2pt) node[below right, black] {$C$};
+\filldraw[black] (-1.0,-0.577) circle (2pt) node[left, black] {$B^-$};
+\end{tikzpicture}
+\end{figure}
+So, by a similar argument to that found on P.g.174, since there is only one reduced matrix element, the matrix element is proportional to $T_8$ and thus the hypercharge $Y$, thus the mass spacings are equal
+\begin{equation}
+M_A-M_B=M_B-M_C.
+\end{equation}
+
+\subsection{Calculate $\text{Prob}(\pi^0P\rightarrow\Delta^+)$ with $\text{Prob}(K^-P\rightarrow\Sigma^{*0})$ assuming $\mathfrak{su}(3)$ symmetry of the S-matrix.}
+Both the ${\Sigma^*}^{0}$ and $\Delta^+$ Baryons $\in10$ (decuplet) while $\pi^0P$, $K^-P\in8\otimes8=1\oplus8\oplus8\oplus10\oplus\overline{10}\oplus27$ which clearly contains the $10$ only once. The S-Matrix couples to the $\overline{10}$ of the decuplet.
+So, in the tensor notation we may write the Meson-Baryon states $\in$ the 10 as $M^i_lB^j_m\epsilon^{klm}\left|_{ijk}\right>$ and the decuplet states as $D^{ijk}\left|_{ijk}\right>$. Then, in $\left<\Delta^+|S|\pi^0P\right>$ and $\left<{\Sigma^*}^{0}|S|K^-P\right>$, because the S-matrix is taken to the $\mathfrak{su}(3)$ invariant, similarly to Problem (10.E.b), by Schur's Lemma $S\propto\mathbb{I}=\lambda\mathbb{I}$, with $\lambda$ a coupling constant.
+
+Because we are only interested in $P, K^-, \pi^0$ states be can take the matrices $B,M$ to be (equation (11.15) in Georgi)
+\begin{equation}
+B=\begin{pmatrix}0&0&P\\0&0&0\\0&0&0\end{pmatrix},\qquad M=\begin{pmatrix}\frac{\pi^0}{\sqrt{2}}&0&0\\0&\frac{\pi^0}{\sqrt{2}}&0\\K^-&0&0\end{pmatrix}
+\end{equation}
+
+So, the matrix elements are given by 
+\begin{align}
+\left<\Delta^+|S|\pi^0P\right>=&\lambda\left<^{abc}\right|\overline{D}_{abc}M^i_lB^j_m\epsilon^{klm}\left|_{ijk}\right>\\
+=&\delta^a_i\delta^b_j\delta^c_k\lambda\overline{D}_{abc}M^i_lB^j_m\epsilon^{klm}\\
+=&\lambda\overline{D}_{ijk}M^i_lB^j_m\epsilon^{klm}\\
+=&\lambda\overline{D}_{11k}M^1_1B^1_3\epsilon^{k13}+\lambda\overline{D}_{21k}M^2_2B^1_3\epsilon^{k23}\\
+=&-\lambda\overline{D}_{112}M^1_1B^1_3+\lambda\overline{D}_{211}M^2_2B^1_3
+\end{align}
+we have $\overline{D}_{112}=\overline{D}_{121}=\overline{D}_{211}=\frac{\overline{\Delta^+}}{\sqrt{3}}$.
+so
+\begin{equation}
+\left<\Delta^+|S|\pi^0P\right>=-2N\lambda\left(\frac{\overline{\Delta^+}\pi^0P}{\sqrt{6}}\right)
+\end{equation}
+so that 
+\begin{equation}
+\text{Prob}(\pi^0P\rightarrow\Delta^+)=-\frac{4}{6}\lambda^2
+\end{equation}
+
+similarly
+\begin{align}
+\left<{\Sigma^*}^{0}|S|K^-P\right>=&\lambda\overline{D}_{31k}M^3_1B^1_3\epsilon^{kl3}\\
+=&-\lambda\overline{D}_{312}M^3_1B^1_3.
+\end{align}
+and $\overline{D}_{123}=\text{perms}=\frac{\overline{{\Sigma^*}^0}}{\sqrt{6}}$
+so
+\begin{equation}
+\left<{\Sigma^*}^{0}|S|K^-P\right>=-\lambda\frac{\overline{{\Sigma^*}^0}K^-P}{\sqrt{6}}
+\end{equation}
+then the probability is
+\begin{equation}
+\text{Prob}(K^-P\rightarrow\overline{{\Sigma^*}^0})=-\frac{1}{6}\lambda^2.
+\end{equation}
+So the ratios are
+\begin{equation}
+\frac{\text{Prob}(\pi^0P\rightarrow\Delta^+)}{\text{Prob}(K^-P\rightarrow\overline{{\Sigma^*}^0})}=4.
+\end{equation}
+
+\subsection{In $\mathfrak{su}(3)$ repeat the calculation by Coleman \& Glashow, predicting the spin $1/2$ baryon magnetic moments in terms of $\mu_P$ and $\mu_N$}
+
+The specifics of the magnetic moment operator is unknown but we know it is $\propto Q=\text{diag}(2/3,-1/3,-1/3)$, the charge operator. Therefore the only possibilities for the magnetic moment operator is $\mu(B)=\alpha\Tr{(B^{\dagger}QB)}+\beta\Tr{(B^{\dagger}BQ)}$. This allows us to compute the magnetic moments to a good accuracy in terms of the proton and neutron magnetic moments $\mu_P$, $\mu_N$. We need $B$ which is given by $(11.15)$ in Georgi.
+\begin{equation}
+B=\begin{pmatrix} \frac{\Sigma^0}{\sqrt{2}}+\frac{\Lambda}{\sqrt{6}}&\Sigma^+ &P\\ \Sigma^- & -\frac{\Sigma^0}{\sqrt{2}}+\frac{\Lambda}{\sqrt{6}}&N\\ \Xi^- & \Xi^0& \frac{-2\Lambda}{\sqrt{6}}\end{pmatrix}
+\end{equation}
+
+\begin{equation}
+B^{\dagger}QB=\frac{1}{3}\begin{pmatrix} \frac{\overline{\Sigma^0}}{\sqrt{2}}+\frac{\overline{\Lambda}}{\sqrt{6}}&\overline{\Sigma^-} &\overline{\Xi^-}\\ \overline{\Sigma^+} & \frac{-\overline{\Sigma^0}}{\sqrt{2}}-\frac{\overline{\Lambda}}{\sqrt{6}}&\overline{\Xi^0}\\ \overline{P} & \overline{N}& \frac{-2\overline{\Lambda}}{\sqrt{6}}\end{pmatrix}\begin{pmatrix}
+\frac{2\Sigma^0}{\sqrt{2}}+\frac{2\Lambda}{\sqrt{6}}&2\Sigma^+ &2P\\ -\Sigma^- & \frac{\Sigma^0}{\sqrt{2}}-\frac{\Lambda}{\sqrt{6}}&-N\\ -\Xi^- & -\Xi^0& \frac{2\Lambda}{\sqrt{6}}
+\end{pmatrix},
+\end{equation}
+
+\begin{equation}
+B^{\dagger}BQ=\frac{1}{3}\begin{pmatrix} \frac{\overline{\Sigma^0}}{\sqrt{2}}+\frac{\overline{\Lambda}}{\sqrt{6}}&\overline{\Sigma^-} &\overline{\Xi^-}\\ \overline{\Sigma^+} & \frac{-\overline{\Sigma^0}}{\sqrt{2}}-\frac{\overline{\Lambda}}{\sqrt{6}}&\overline{\Xi^0}\\ \overline{P} & \overline{N}& \frac{-2\overline{\Lambda}}{\sqrt{6}}\end{pmatrix}
+\begin{pmatrix}
+\frac{2\Sigma^0}{\sqrt{2}}+\frac{2\Lambda}{\sqrt{6}}&-\Sigma^+ &-P\\ 2\Sigma^- & \frac{\Sigma^0}{\sqrt{2}}-\frac{\Lambda}{\sqrt{6}}&-N\\ 2\Xi^- & -\Xi^0& \frac{2\Lambda}{\sqrt{6}}
+\end{pmatrix}.
+\end{equation}
+Then we compute the traces
+\begin{equation}\label{eqn:tr1}
+\begin{split}
+\alpha\Tr{(B^{\dagger}QB)}=&\frac{\alpha}{3}\big(  2(\frac{\Sigma^0}{\sqrt{2}}+\frac{\Lambda}{\sqrt{6}})(\frac{\overline{\Sigma^0}}{\sqrt{2}}+\frac{\overline{\Lambda}}{\sqrt{6}}) -\Sigma^-\overline{\Sigma^-}-\Xi^-\overline{\Xi^-}+2\Sigma^
++\overline{\Sigma^+}\nonumber\\& +(\frac{\Sigma^0}{\sqrt{2}}-\frac{\Lambda}{\sqrt{6}})(\frac{-\overline{\Sigma^0}}{\sqrt{2}}+\frac{\overline{\Lambda}}{\sqrt{6}})-\Xi^0\overline{\Xi^0}+2P\overline{P}-N\overline{N}-\frac{2\Lambda\overline{\Lambda}}{3}\big),
+\end{split}
+\end{equation}
+
+\begin{equation}\label{eqn:tr2}
+\begin{split}
+\beta\Tr{(B^{\dagger}BQ)}=&\frac{\beta}{3}\big(  2(\frac{\Sigma^0}{\sqrt{2}}+\frac{\Lambda}{\sqrt{6}})(\frac{\overline{\Sigma^0}}{\sqrt{2}}+\frac{\overline{\Lambda}}{\sqrt{6}}) +2\Sigma^-\overline{\Sigma^-}+2\Xi^-\overline{\Xi^-}-\Sigma^
++\overline{\Sigma^+}\nonumber\\& +(\frac{\Sigma^0}{\sqrt{2}}-\frac{\Lambda}{\sqrt{6}})(\frac{-\overline{\Sigma^0}}{\sqrt{2}}+\frac{\overline{\Lambda}}{\sqrt{6}})-\Xi^0\overline{\Xi^0}+-P\overline{P}-N\overline{N}-\frac{2\Lambda\overline{\Lambda}}{3}\big).
+\end{split}
+\end{equation}
+So, putting \eqref{eqn:tr1} and \eqref{eqn:tr2} together we have
+\begin{equation}
+\begin{split}
+\mu(B)=&\frac{\alpha}{3}\big(  2(\frac{\Sigma^0}{\sqrt{2}}+\frac{\Lambda}{\sqrt{6}})(\frac{\overline{\Sigma^0}}{\sqrt{2}}+\frac{\overline{\Lambda}}{\sqrt{6}}) -\Sigma^-\overline{\Sigma^-}-\Xi^-\overline{\Xi^-}+2\Sigma^
++\overline{\Sigma^+}\nonumber\\& +(\frac{\Sigma^0}{\sqrt{2}}-\frac{\Lambda}{\sqrt{6}})(\frac{-\overline{\Sigma^0}}{\sqrt{2}}+\frac{\overline{\Lambda}}{\sqrt{6}})-\Xi^0\overline{\Xi^0}+2P\overline{P}-N\overline{N}-\frac{2\Lambda\overline{\Lambda}}{3}\big)\nonumber\\&+\frac{\beta}{3}\big(  2(\frac{\Sigma^0}{\sqrt{2}}+\frac{\Lambda}{\sqrt{6}})(\frac{\overline{\Sigma^0}}{\sqrt{2}}+\frac{\overline{\Lambda}}{\sqrt{6}}) +2\Sigma^-\overline{\Sigma^-}+2\Xi^-\overline{\Xi^-}-\Sigma^+\overline{\Sigma^+}\nonumber\\& +(\frac{\Sigma^0}{\sqrt{2}}-\frac{\Lambda}{\sqrt{6}})(\frac{-\overline{\Sigma^0}}{\sqrt{2}}+\frac{\overline{\Lambda}}{\sqrt{6}})-\Xi^0\overline{\Xi^0}+-P\overline{P}-N\overline{N}-\frac{2\Lambda\overline{\Lambda}}{3}\big).
+\end{split}
+\end{equation}
+Thus we may read of the magnetic moments by picking out the coefficients,
+\begin{align}
+&\mu_{P}=\frac{2\alpha}{3}-\frac{\beta}{3}=\frac{1}{3}(2\alpha-\beta)\\
+&\mu_{\Sigma^0}=\frac{1}{6}(\alpha+\beta)\\
+&\mu_{\Lambda\Sigma^0}=\sqrt{3}(\alpha+\beta)\\
+&\mu_{\Sigma^-}=\frac{1}{3}(-\alpha+2\beta)\\
+&\mu_{\Xi^-}=\frac{1}{3}(-\alpha+2\beta)\\
+&\mu_{\Sigma^+}=\frac{1}{3}(2\alpha-\beta)\\
+&\mu_{\Lambda}=-\frac{1}{6}(\alpha+\beta)\\
+&\mu_{N}=-\frac{1}{3}(\alpha+\beta)\\
+&\mu_{\Xi^0}=-\frac{1}{3}(\alpha+\beta).
+\end{align}
+Writing $\alpha$ and $\beta$ in terms of $\mu_P$ \& $\mu_N$. $\alpha=\mu_P-\mu_N$, $\beta=-\mu_P-2\mu_N$. So in the end we have
+\begin{align}
+&\mu_{\Sigma^0}=-\frac{1}{2}\mu_N\\
+&\mu_{\Lambda\Sigma^0}=-\frac{\sqrt{3}}{2}\mu_N\\
+&\mu_{\Sigma^-}=-\mu_N-\mu_P\\
+&\mu_{\Xi^-}=-\mu_P-\mu_N\\
+&\mu_{\Sigma^+}=\mu_P\\
+&\mu_{\Lambda}=\frac{1}{2}\mu_N\\
+&\mu_{\Xi^0}=\mu_N.
+\end{align}
+\end{document}

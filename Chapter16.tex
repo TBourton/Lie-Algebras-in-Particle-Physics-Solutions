@@ -1,0 +1,129 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
+\subsection{Find a relation between the sum of the products of color charges in the color singlet $q\bar{q}$ meson state and the $qq$ pair in a baryon.}
+The meson in the color singlet in $3\otimes\bar{3}=8\oplus1$, $q\bar{q}=q^i\bar{q}_i\in1$. $\left|q\bar{q}\right>=\frac{1}{\sqrt{3}}(\left|g\bar{g}\right>+\left|b\bar{b}\right>+\left|r\bar{r}\right>)$. The $qq$ pair makes up part of the color singlet baryon state $\epsilon_{ijk}q^iq^jq^k$ or $3\otimes3\otimes3=3\otimes(6\oplus\bar{3})$ and therefore $q^iq^j\in\bar{3}$, because $3\otimes\bar{3}\ni1$ but $6\otimes\bar{3}\not\ni1$. Also we know that the $qq$ state must be antisymmetric in the exchange of a single color, therefore $\left|qq\right>=\frac{1}{\sqrt{6}}(\left|r\bar{b}\right>-\left|b\bar{r}\right>+\left|b\bar{g}\right>-\left|g\bar{b}\right>+\left|g\bar{r}\right>-\left|r\bar{g}\right>)$. To calculate products of charges we must calculate the operator $T_a^AT_a^B=\frac{1}{2}(T_a^2-{T_a^A}^2-{T_a^B}^2)$ on the states. The Casimir operator $T_a^2=0$ for the singlet and $T_a^2=\frac{4}{3}$ for the $\bar{3}$.
+The color states are
+\begin{equation}
+\left|r\right>=\left|\begin{pmatrix}1\\0\\0\end{pmatrix}\right>,\quad\left|b\right>=\left|\begin{pmatrix}0\\1\\0\end{pmatrix}\right>,\quad\left|g\right>=\left|\begin{pmatrix}0\\0\\1\end{pmatrix}\right>.
+\end{equation}
+The $\bar{3}$ generators are given by $T_a^*$.
+\begin{align}
+-\frac{1}{2}({T_a^A}^2+{T_a^B}^2)\left|g\bar{g}\right>&=-\frac{1}{4}(1+1+1+1+\frac{4}{3})\left|g\bar{g}\right>=-\frac{4}{3}\left|g\bar{g}\right>\\
+-\frac{1}{2}({T_a^A}^2+{T_a^B}^2)\left|b\bar{b}\right>&=-\frac{4}{3}\left|b\bar{b}\right>\\
+-\frac{1}{2}({T_a^A}^2+{T_a^B}^2)\left|r\bar{r}\right>&=-\frac{4}{3}\left|r\bar{r}\right>.
+\end{align}
+So,
+\begin{equation}
+T_a^AT_a^B\left|q\bar{q}\right>=\frac{1}{\sqrt{3}}\cdot3\cdot\frac{-4}{3}=\frac{-4}{\sqrt{3}}.
+\end{equation}
+For the $qq$ state, we have
+\begin{equation}
+-\frac{1}{2}({T_a^A}^2+{T_a^B}^2)\left|qq\right>=0.
+\end{equation}
+So,
+\begin{equation}
+T_a^2T_b^2\left|qq\right>=\frac{1}{2}\cdot\frac{1}{\sqrt{6}}\cdot3\cdot\frac{4}{3}=\frac{2}{\sqrt{6}}.
+\end{equation}
+
+\subsection{Suppose $\exists$ 'Quix' $Q\in6$ of color $\mathfrak{su}(3)$, what is the spectrum of bound states? How do they transform under Gell-Mann's flavour $\mathfrak{su}(3)$?}
+The Quix is a flavour singlet. We need to find possible color singlets which can be built from a quix and a number of quarks and antiquarks, i.e. $6\otimes?=1\oplus...$.
+The possible ways to built color singlets from a $6$, $3$'s and $\bar{3}$'s are
+\begin{align}
+&Q\bar{q}\bar{q}=6\otimes\bar{3}\otimes\bar{3}=\young(\hfil \hfil,ac,bd)\oplus...=1+...\\
+&Qqq\bar{q}=6\otimes3\otimes3\otimes\bar{3}=\young(\hfil \hfil,ac,bd)\oplus...=1+...\\
+&Qqqqq=6\otimes3\otimes3\otimes3\otimes3=\young(\hfil \hfil,ab,cd)\oplus...=1+...
+\end{align}
+To find out how these states transform under flavour $\mathfrak{su}(3)$ we must find out how the quarks $\in\mathfrak{su}(18)\rightarrow\mathfrak{su}(6)_{fs}\otimes\mathfrak{su}(3)_{c}$ decompose into irreps of $\mathfrak{su}(3)$ flavour. We must look for the color $\bar{6}$ quark state which couples to the color $6$ Quix state.
+
+In $Q\bar{q}\bar{q}$ look for the anti-symmetric 2-quark state $\yng(1,1)$ in $\bar{18}\otimes\bar{18}=\yng(1,1)+...=\frac{18!}{2!(18-2)!}=\bar{153}$. Then under $\in\mathfrak{su}(18)\rightarrow\mathfrak{su}(6)_{fs}\otimes\mathfrak{su}(3)_{c}$
+\begin{align}
+\bar{153}=\yng(1,1)\rightarrow&(\yng(1,1),\yng(2))\oplus(\yng(2),\yng(1,1))\oplus...\\
+=&(\bar{15},\bar{6})\oplus(\bar{21}\oplus\bar{3})
+\end{align}
+We want the $\bar{6}$ of $\mathfrak{su}(3)_c$, therefore we pick the $15$ of $\mathfrak{su}(6)_{fs}$. Then, under $\mathfrak{su}(6)_{fs}\rightarrow\mathfrak{su}(3)_f\otimes\mathfrak{su}(2)_s$
+\begin{align}
+\bar{15}=\yng(1,1)\rightarrow&(\yng(1,1),\yng(2))\oplus(\yng(2),\yng(1,1))\\
+=&(\bar{3},3)\oplus(\bar{6}\oplus1)
+\end{align}
+Thus, under flavour $\mathfrak{su}(3)$ $Q\bar{q}\bar{q}$ transforms as $\bar{3}\oplus\bar{6}$.
+
+For the $Qqqqq$ state the antisymmetric part of $qqqq=18\otimes18\otimes18\otimes18$ is $(1,1,1,1)=\yng(1,1,1,1)$. Under $\in\mathfrak{su}(18)\rightarrow\mathfrak{su}(6)_{fs}\otimes\mathfrak{su}(3)_{c}$.
+\begin{equation}
+\yng(1,1,1,1)\rightarrow(\yng(2,2),\yng(2,2))\oplus(\yng(1,1,1,1),\yng(4))\oplus(\yng(3,1),\yng(2,1,1))\oplus(\yng(2,1,1),\yng(3,1)).
+\end{equation}
+The $\bar{6}$ of $\mathfrak{su}(3)_c$ is $\yng(2,2)$. So we pick $\yng(2,2)$ of $\mathfrak{su}(6)_{fs}$.
+Under $\mathfrak{su}(6)_{fs}\rightarrow\mathfrak{su}(3)_{f}\otimes\mathfrak{su}(2)_{s}$. 
+\begin{align}
+\yng(2,2)&\rightarrow(\yng(2,2),\yng(2,2))\oplus(\yng(2,1,1),\yng(3,1))\oplus(\yng(2,2),\yng(3,1))\oplus(\yng(3,1),\yng(2,2))\oplus(\yng(3,1),\yng(3,1))\\
+&=(\bar{6},1)\oplus(3,3)\oplus(\bar{6},3)\oplus(15,1)\oplus(15,3).
+\end{align}
+Thus, $Qqqqq$ transforms as a $\bar{6}\oplus3\oplus\bar{6}\oplus15\oplus15$ under flavour $\mathfrak{su}(3)$.
+
+For the $Q\bar{q}qq$ state 
+\begin{align}
+\bar{18}\otimes18\otimes18&=\begin{ytableau}
+\hfil &  \dots  & \hfil
+\end{ytableau} \otimes(\begin{ytableau}
+a\\b
+\end{ytableau}\oplus\begin{ytableau}
+a&a
+\end{ytableau}  )\\
+&=\begin{ytableau}
+\hfil &  \dots& \hfil&a\\
+a
+\end{ytableau} \oplus \begin{ytableau}
+\hfil & \dots & \hfil\\
+a&a
+\end{ytableau} \oplus\begin{ytableau}
+\hfil & \dots & \hfil&a\\
+b
+\end{ytableau} 
+\end{align}
+as we are only interested in the antisymmetric parts and here $\young(\dots)$ stands for a youngs tableux with 1 row containing 15 boxes.
+Under $\mathfrak{su}(18)\rightarrow\mathfrak{su}(6)_{fs}\otimes\mathfrak{su}(3)_{c}$ the $\bar{6}$ of $\mathfrak{su}(3)_c$ with 19  boxes is given by $[3,3,3,3,3,2,2]$ where each number represents the number of boxes per column. So ...........
+
+
+\subsection{Prove (a) \& (b) and calculate $C(8)$, $C(10)$ \& $C(6)$.}
+We are told that $C(D)={T_a}^2$ and
+\begin{equation}
+\Tr{({T_a}^2)}=\text{dim}(D)C(D) =\sum_a{\Tr{(T_aT_b)}}=\sum_a{\delta_{aa}k_D}=8k_D.
+\end{equation}
+\subsubsection{$k_{D_1\oplus D_2}=k_{D_1}+k_{D_2}$}
+\begin{equation}
+\text{dim}(D_1\oplus D_2)C(D_1\oplus D_2)=\sum_a{\Tr{({T_a}_{D_1\oplus D_2}^{2})}}=8k_{D_1\oplus D_2}.
+\end{equation}
+But, because $D_1\oplus D_2=\begin{pmatrix}D_1&0\\0&D_2\end{pmatrix}$. Thus the generators of $D_1\oplus D_2$ may be decomposed into independent generators with dimension dim$(D_1\oplus D_2)$ act trivially on their respective invariant subspaces. So that
+\begin{equation}
+\text{dim}(D_1\oplus D_2)C(D_1\oplus D_2)=\sum_a{\Tr{({T_a}_{D_1}^2\oplus {T_a}_{D_2}^{2})}}=8k_{D_1}+8k_{D_2}.
+\end{equation}
+Therefore $k_{D_1\oplus D_2}=k_{D_1}+k_{D_2}$.
+
+\subsubsection{$k_{D_1\otimes D_2}=\text{dim}(D_2)k_{D_1}+\text{dim}(D_1)k_{D_2}$}
+\begin{equation}
+\text{dim}(D_1\otimes D_2)C(D_1\otimes D_2)=\sum_a{\Tr{({T_a}_{D_1\otimes D_2}^{2})}}=8k_{D_1\otimes D_2}.
+\end{equation}
+But $D_1\otimes D_2=D_1\otimes\mathbb{I}_2+\mathbb{I}_1\otimes D_2$ and dim$(D_1\otimes D_2)=\text{dim}(D_1)\text{dim}(D_2)$.
+Therefore
+\begin{align}
+\sum_a{\Tr{({T_a}_{D_1\otimes D_2}^{2})}}=&\sum_a{(\Tr{({T_a}_{D_1}^2\otimes\mathbb{I}_2)}+\Tr{(\mathbb{I}_1\otimes{T_a}_{D_2}^2)})}\\
+=&\text{dim}(D_2)(\sum_a{\delta_{aa}k_{D_1}})+\text{dim}(D_1)(\sum_a{\delta_{aa}k_{D_2}})\\
+=&8\text{dim}(D_2)k_{D_1}+8\text{dim}(D_1)k_{D_2}
+\end{align}
+So $k_{D_1\otimes D_2}=\text{dim}(D_2)k_{D_1}+\text{dim}(D_1)k_{D_2}$.
+
+For the Casimir operators, for $D=3,\bar{3}$, $C(3)=\frac{4}{3}$. For $D=1$, $C(1)=0$. We will also need the $\mathfrak{su}(3)$ decompositions $3\otimes\bar{3}=8\oplus1$, $3\otimes3=6\oplus\bar{3}$, $3\otimes6=8\oplus10$.
+\begin{align}
+k_{3\otimes\bar{3}}&=\text{dim}(3)k_{\bar{3}}+\text{dim}(\bar{3})k_3=3\cdot\frac{1}{2}+3\cdot\frac{1}{2}=3\\
+&=k_{8\oplus1}=k_8+k_1=k_8.
+\end{align}
+So $C(8)=\frac{8}{8}\times3=3$
+\begin{equation}
+k_{3\otimes3}=3=k_{6\otimes\bar{3}}=k_6+k_{\bar{3}}=k_6+\frac{1}{2}.
+\end{equation}
+So, $k_6=\frac{5}{2}$ and $C(6)=\frac{8}{6}\times\frac{5}{2}=\frac{10}{3}$.
+\begin{align}
+k_{6\otimes3}&=6k_3+3k_6=\frac{6}{2}+\frac{3\times5}{2}=\frac{21}{2}\\
+&=k_{8\oplus10}=k_8+k_{10}=3+k_{10}.
+\end{align}
+So $k_{10}=\frac{21}{2}-3=\frac{15}{2}$, thus $C(10)=\frac{8}{10}\times\frac{15}{2}=6$.
+\end{document}

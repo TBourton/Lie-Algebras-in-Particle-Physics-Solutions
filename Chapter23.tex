@@ -1,0 +1,66 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
+\subsection{Use the binomial theorem to show the dimensions work out.}
+We make use of the following formulas
+\begin{align}
+(x+y)^n=&\sum_{k=0}^n{\binom{n}{k}x^ky^{n-k}}\\
+\binom{n}{k}=&\binom{n}{n-k}\\
+\binom{n}{k}=&\binom{n-1}{n}+\binom{n-1}{k-1}.
+\end{align}
+\subsubsection{$D^{2n+1}=\sum^n_{j=0}[2j+1]$ and $D^{2n}=\sum^n_{j=0}[2j]$}
+For the embedding of $\mathfrak{su}(2n+1)$ $\mathfrak{so}(4n+2)$
+\begin{equation}
+\dim{(D^{2n+1})}=\dim{(D^{2n})}=2^{2n}.
+\end{equation}
+To check the dimension of $D^{2n+1}$
+\begin{align}
+\dim{\left(\sum^n_{j=0}[2j+1]\right)}=&\sum^n_{j=0}\binom{2n+1}{2j+1}
+\end{align}
+But because $\binom{2n+1}{2j+1}=\binom{2n+1}{2n+1-(2j+1)}=\binom{2n+1}{2n-2j}$ so $\sum^n_{j=0}\binom{2n+1}{2j+1}=\sum^n_{j=0}\binom{2n+1}{2n-2j}$
+\begin{equation}
+\implies \sum^n_{j=0}\binom{2n+1}{2j+1}=\left(\sum^n_{j=0}\binom{2n+1}{2j+1}+\sum^n_{j=0}\binom{2n+1}{2n-2j}\right)/2
+\end{equation}
+but this simply sums over all odd+even binomial coeff's so this is equivalent to
+\begin{equation}
+\sum^n_{j=0}\binom{2n+1}{2j+1}=\frac{\sum^{2n+1}_{j=0}\binom{2n+1}{j}}{2}=\frac{2^{2n+1}}{2}=2^{2n}=\dim{(D^{2n+1})}.
+\end{equation}
+thus the dimension works out.
+
+Now to check the dimension of $D^{2n}$
+\begin{align}
+\dim{\left(\sum^n_{j=0}[2j]\right)}=&\sum^n_{j=0}\binom{2n+1}{2j}\\
+=&\sum^n_{j=0}\left[\binom{2n}{2j}+\binom{2n}{2j-1}\right]\\
+=&\sum^{2n}_{j=0}\binom{2n}{j}\\
+=&2^{2n}=\dim{(D^{2n})}.
+\end{align}
+
+\subsubsection{$D^{2n}=\sum^n_{j=0}[2j]$ and $D^{2n-1}=\sum^{n-1}_{j=0}[2j]$}
+\begin{align}
+\dim(D^{2n})=&2^{2n-1}\\
+=&\sum^n_{j=0}\binom{2n}{2j}\\
+=&\sum^n_{j=0}\left[\binom{2n-1}{2j}+\binom{2n-1}{2j-1}\right]\\
+=&\sum^{2n-1}_{j=0}\binom{2n-1}{j}=2^{2n-1}
+\end{align}
+
+\begin{align}
+\dim(D^{2n-1})=&2^{2n-1}\\
+=&\sum^{n-1}_{j=0}\binom{2n}{2j-1}\\
+=&\sum^{n-1}_{j=0}\left[\binom{2n-1}{2j}+\binom{2n-1}{2j-1}\right]\\
+=&\sum^{2n-1}_{j=0}\binom{2n-1}{j}=2^{2n-1}
+\end{align}
+
+\subsection{Determine how the vector representation $D^1$ of $\mathfrak{so}(2n)$ transforms under $\mathfrak{su}(n)$.}
+
+\subsection{Let $u^{jkl}$ be a completely antisymmetric tensor in $\mathfrak{so}(6)$ a self-duality condition is $u^{jkl}=\lambda\epsilon^{jklabc}u^{abc}$. What are the possible values of $\lambda$?}
+For $\mathfrak{so}(4m+2)$: $D^{2m+1}\otimes D^{2m+1}$, $D^{2m+1}\otimes D^{2m}$, $D^{2m}\otimes D^{2m}$. $m=1$ and the rank of $\mathfrak{so}(6)$ is $n=3$ so in $\mathfrak{so}(6)$: $\overline{D}^2=D^3$ and $\overline{D}^3=D^2$.
+
+$D^3\otimes D^2=D^3\otimes \overline{D}^3$, $D^3\otimes D^3=D^3\otimes \overline{D}^2$ and $D^2\otimes D^2=D^2\otimes \overline{D}^3$
+
+Thus the relation is self-dual and complex so $\lambda=\frac{\img}{3!}$.
+
+
+\subsection{How does the spinor representation of $\mathfrak{so}(14)$ transform under the following subgroups:}
+\subsubsection{$\mathfrak{su}(7)$?}
+
+\subsubsection{$\mathfrak{so}(4)\times\mathfrak{su}(5)$?}
+\end{document}

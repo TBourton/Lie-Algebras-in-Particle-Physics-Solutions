@@ -1,0 +1,81 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
+
+\subsection{Find $(2,1)\otimes(2,1)$, which reps appear antisymmetrically? which symmetrically?}
+
+\begin{align*}
+&(2,1)\otimes(2,1)=\yng(3,1)\otimes\young(aaa,b)\\
+&\young(\hfil\hfil\hfil aaa,\hfil) \rightarrow  \sout{\young(\hfil\hfil\hfil aaab,\hfil)}\oplus \young(\hfil\hfil\hfil aaa,\hfil b)\oplus\young(\hfil\hfil\hfil aaa,\hfil,b)\nonumber\\
+&\young(\hfil\hfil\hfil aa,\hfil a)\rightarrow \sout{\young(\hfil\hfil\hfil aab,\hfil a)} \oplus \young(\hfil\hfil\hfil aa,\hfil ab) \oplus \young(\hfil\hfil\hfil aa,\hfil a,b)\nonumber\\
+&\young(\hfil\hfil\hfil a,\hfil aa)\rightarrow\sout{\young(\hfil\hfil\hfil ab,\hfil aa)}\oplus\young(\hfil\hfil\hfil a,\hfil aab)\oplus\young(\hfil\hfil\hfil a,\hfil aa,b)\nonumber\\
+&\young(\hfil\hfil\hfil a,\hfil a,a)\rightarrow\sout{\young(\hfil\hfil\hfil ab,\hfil a,a)}\oplus\young(\hfil\hfil\hfil a,\hfil ab,a)\oplus\young(\hfil\hfil\hfil a,\hfil a,ab)\oplus\sout{\young(\hfil\hfil\hfil a,\hfil a,a,b)}\nonumber\\
+&\young(\hfil\hfil\hfil aa,\hfil ,a)\rightarrow\sout{\young(\hfil\hfil\hfil aab,\hfil ,a)}\oplus\young(\hfil\hfil\hfil aa,\hfil b,a)\oplus\sout{\young(\hfil\hfil\hfil aa,\hfil ,ab)}\oplus\sout{\young(\hfil\hfil\hfil aa,\hfil ,a,b)}\nonumber\\
+&\young(\hfil\hfil\hfil ,\hfil aa,a)\rightarrow\sout{\young(\hfil\hfil\hfil b,\hfil aa,a)}\oplus\sout{\young(\hfil\hfil\hfil ,\hfil aab,a)}\oplus\young(\hfil\hfil\hfil ,\hfil aa,ab)\oplus\sout{\young(\hfil\hfil\hfil ,\hfil aa,a,b)}.
+\end{align*}
+
+So together
+
+\begin{align}
+(2,1)\otimes(2,1)=
+&\young(\hfil\hfil\hfil aaa,\hfil b)\oplus
+\young(\hfil\hfil\hfil aab,\hfil a) \oplus 
+\young(\hfil\hfil\hfil aa,\hfil ab) \nonumber\\&\oplus 
+\young(\hfil\hfil\hfil aa,\hfil a,b)\oplus
+\young(\hfil\hfil\hfil a,\hfil aab)\oplus
+\young(\hfil\hfil\hfil a,\hfil aa,b)\nonumber\\&\oplus
+\young(\hfil\hfil\hfil a,\hfil ab,a)\oplus
+\young(\hfil\hfil\hfil a,\hfil a,ab)\oplus
+\young(\hfil\hfil\hfil aa,\hfil b,a)\oplus
+\young(\hfil\hfil\hfil ,\hfil aa,ab)\\
+=&(4,2)\oplus(5,0)\oplus(2,3)\oplus(3,1)\oplus(0,4)\oplus(1,2)\oplus(1,2)\nonumber\\&\oplus(2,0)\oplus(3,1)\oplus(0,1)\\
+=&60\oplus21\oplus42\oplus24\oplus15\oplus24\oplus6\oplus15\oplus24\oplus3.
+\end{align}
+To determine which reps appear antisymmetrically/symmetrically recall that in the Young's Tableaux a horizontal exchange corresponds to a symmetric interchange of indices, while a vertical exchange corresponds to an antisymmetric exchange. To see this label the boxes in the tensor product as follows 
+\begin{equation}
+(2,1)\otimes(2,1)=\young(123,4)\otimes\young(\oneprime \twoprime \threeprime,\fourprime)\\
+\end{equation}
+Then we look at the interchanges $1\leftrightarrow1'$, $2\leftrightarrow2'$, etc. Then we see that the only symmetric representation is $(4,2)$, while all the others appear antisymmetrically
+
+
+\subsection{Find $10\otimes8$.}
+$10=(3,0)=A^{i_1i_2i_3}$, $8=(1,1)=A^{i_1}_{j_1}$
+\begin{align}
+10\otimes8=&\yng(3)\otimes\young(aa,b)\\
+=&\young(\hfil\hfil\hfil aa) \rightarrow \sout{\young(\hfil\hfil\hfil aab)}\oplus\young(\hfil\hfil\hfil aa,b)\nonumber\\
+&\young(\hfil\hfil\hfil a,a)\rightarrow\sout{\young(\hfil\hfil\hfil ab,a)}\oplus\young(\hfil\hfil\hfil a,ab)\oplus\young(\hfil\hfil\hfil a,a,b)\nonumber\\
+&\young(\hfil\hfil\hfil ,aa)\rightarrow\sout{\young(\hfil\hfil\hfil b,aa)}\oplus\sout{\young(\hfil\hfil\hfil ,aab)}\oplus\young(\hfil\hfil\hfil ,aa,b)\\
+&\sout{\young(\hfil\hfil\hfil ,a,a)}\\
+&=(4,1)\oplus(2,2)\oplus(3,0)\oplus(1,1)\nonumber\\
+&=35\oplus27\oplus10\oplus8.
+\end{align}
+
+\subsection{Show that for any non-trivial representation $D$ of $\mathfrak{su}(3)$ then $D\otimes8\ni D$ using Young's Tableaux.}
+This can be understood because the tensor product will always contain a term such as $D\otimes(1,1)=D\otimes D_{adj}=D^{i_1...i_n}_{j_1...j_m} {D_{adj}}^l_k=\dots\oplus  \delta^k_lD^{i_1...i_n}_{j_1...j_m} {D_{adj}}^l_k \oplus\dots$.
+More concretely, for an arbitrary representation $D=(n,m)$ the Young's tableaux for the product is given by 
+
+\begin{align}
+(n,m)\otimes(1,1)&=\ytableausetup
+{mathmode, boxsize=1.3em}
+\begin{ytableau}
+k_1 & \dots & k_m & i_1 & \dots & i_n\\
+l_1 & \dots & l_m\\
+\end{ytableau}
+\otimes 
+\begin{ytableau}
+a & a\\
+b\\
+\end{ytableau}
+\\
+&=\dots \oplus \begin{ytableau}
+k_1 & \dots & k_m & i_1 & \dots & i_n &a\\
+l_1 & \dots & l_m&a\\
+b\\
+\end{ytableau} \oplus\dots\\
+&=\dots \oplus \begin{ytableau}
+k_2 & \dots & k_m & i_1 & \dots & i_n &a\\
+l_2 & \dots & l_m&a\\
+\end{ytableau} \oplus\dots\\
+&=\dots \oplus (n,m)\oplus\dots.
+\end{align}
+Therefore $D\in D\otimes8$.
+\end{document}

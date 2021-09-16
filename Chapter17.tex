@@ -1,0 +1,101 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
+\subsection{}
+\subsection{Estimate $m_{u,d}/m_s$ by comparing $\rho-\pi$ mass splitting with the $K^*-K$ mass splitting. Make an independent estimate of the ratio using combinations of the $\Sigma^*-\Sigma$ and $\Sigma-\Lambda$ splittings.}
+The particle masses are given by the quark masses $+$ a contribution from the strong force (often called the chromomagnetic mass splitting)
+\begin{equation}
+H_{CM}=k\sum_{\text{pairs } i,j}\frac{\underline{\sigma}_i\cdot\underline{\sigma}_j}{m_im_j}
+\end{equation}
+For mesons we can write the contribution to the Hamiltonian as
+\begin{align}\label{eq:17hamil}
+M&=\sum_im_i+ H_{CM}\\
+&=m_1+m_2+\frac{k}{2m_1m_2}\left(\sum_{i,j}\underline{\sigma}_i\cdot\underline{\sigma}_j-\sum_j\underline{\sigma}_j\cdot\underline{\sigma}_j\right)\\
+&=m_1+m_2+\frac{k}{2m_1m_2}\left(\underline{S}^2-\underline{S_1}^2-\underline{S_2}^2\right)\\
+&=m_1+m_2+\frac{k}{2m_1m_2}\left(\underline{S}^2-\underline{S_1}^2-\underline{S_2}^2\right)\\
+&=m_1+m_2+\frac{k}{2m_1m_2}\left(S(S+1)-S_1(S_1+1)-S_2(S_2+1)\right)
+\end{align}
+where $S_i=1/2$ are the spins of the individual quarks because $\underline{S}^2\left|l,m\right>=l(l+1)\left|l,m\right>$ and $S=1,0$ depending on whether the spins are aligned or anti-aligned
+
+The $\pi$ mesons are spin-$0$ singlets so that $S=0$ they consist of a $u$ and $d$ quark-antiquark pair where the spins are anti-aligned.
+\begin{align}
+\left|\pi^+\right>=\frac{1}{\sqrt{2}}\left|u\bar{d}\right>(\left|+-\right>+\left|-+\right>)
+\end{align}
+\begin{equation}
+m_{\pi}=\left<\pi^+\right|M\left|\pi^+\right>=m_u+m_d-\frac{3k}{4m_um_d}=2m-\frac{3k}{4m^2}.
+\end{equation}
+where we take $m_u\simeq m_d=m$.
+
+The $\rho$ mesons are spin-$1$ particles so that $S=1$ they consist of a $u$ and $d$ quark-antiquark pair where the spins are aligned.
+\begin{align}
+\left|\rho^+\right>=\frac{1}{\sqrt{2}}\left|u\bar{d}\right>(\left|++\right>+\left|--\right>)
+\end{align}
+\begin{equation}
+m_{\rho}=\left<\rho^+\right|M\left|\rho^+\right>=m_u+m_d+\frac{k}{4m_um_d}=2m+\frac{k}{4m^2}
+\end{equation}
+so 
+\begin{equation}
+m_{\rho}-m_{\pi}=\frac{k}{m^2}
+\end{equation}
+
+Similarly, the Kaon's consist of a $u/d-s$ quark-antiquark pair. The $K$ are spin-$0$ particles while $K^*$ are spin-$1$ particles where the spins are aligned so that
+\begin{align}
+m_{K}=&m+m_s-\frac{3}{4mm_s}\\
+m_{K^*}=&m+m_s+\frac{1}{4mm_s}
+\end{align}
+Therefore
+\begin{equation}
+m_{K^*}-m_{K}=\frac{1}{mm_s}.
+\end{equation}
+So an estimate for $\frac{m_s}{m}$ is
+\begin{equation}
+\frac{m_s}{m}=\frac{m_{\rho}-m_{\pi}}{m_{K^*}-m_{K}}.
+\end{equation}
+experimentally
+\begin{align}
+m_{\rho}-m_{\pi}\simeq&770\text{MeV}-138\text{MeV}=632\text{MeV}\\
+m_{K^*}-m_{K}\simeq&894\text{MeV}-496\text{MeV}=398\text{MeV}
+\end{align}
+so
+\begin{equation}
+\frac{m_s}{m}=\frac{m_{\rho}-m_{\pi}}{m_{K^*}-m_{K}}\simeq1.58.
+\end{equation}
+experimentally $m_s\simeq483\text{MeV}$, $m=m_u=m_d\simeq310\text{MeV}$ so that $\frac{m_s}{m}\simeq1.55$ which is pretty close.
+
+Both the $\Sigma$ and $\Lambda$ are spin $1/2$ states made up of $u/d-u/d-s$ quarks, however the $\Sigma$ is an isospin $1$ state and is flavour symmetric in $u$ and $d$ quarks and so the spins are aligned. The $\Lambda$ is an isospin $0$ state is antisymmetric in $u$ and $d$ flavour and the spins are anti-aligned. The $\Sigma^*$ is a spin $3/2$ state $u/d-u/d-s$ where the spins of the 3 quarks are all aligned.
+for the Baryons
+\begin{align}
+M=&m_1+m_2+m_3+\frac{k}{2m_1m_2}\left(\underline{S}_{12}^2-\underline{S}_1^2-\underline{S}_2^2\right)+\frac{k}{2m_1m_3}\left(\underline{S}_{13}^2-\underline{S}_1^2-\underline{S}_3^2\right)\nonumber\\
+&+\frac{k}{2m_2m_3}\left(\underline{S}_{23}^2-\underline{S}_2^2-\underline{S}_3^2\right)\\
+=&m_1+m_2+m_3+\frac{k}{2m_1m_2}\left(\underline{S}_{12}(\underline{S}_{12}+1)-\underline{S}_1(\underline{S}_1+1)-\underline{S}_2(\underline{S}_2+1)\right)\nonumber\\
+&+\frac{k}{2m_1m_3}\left(\underline{S}_{13}(\underline{S}_{13}+1)-\underline{S}_1(\underline{S}_1+1)-\underline{S}_3(\underline{S}_3)\right)\\
+&+\frac{k}{2m_2m_3}\left(\underline{S}_{23}(\underline{S}_{23}+1)-\underline{S}_2(\underline{S}_2+1)-\underline{S}_3(\underline{S}_3+1)\right)\nonumber
+\end{align}
+
+The wavefunctions are given by
+\begin{align}
+\left|\Sigma^0\right>&=\frac{1}{\sqrt{2}}\left|uds\right>(\left|++-\right>+\left|--+\right>)\\
+\left|\Lambda^0\right>&=\frac{1}{\sqrt{4}}\left|uds\right>(\left|+-+\right>+\left|-++\right>+\left|+--\right>+\left|+--\right>)\\
+\left|\Sigma^{*0}\right>&=\frac{1}{\sqrt{2}}\left|uds\right>(\left|+++\right>+\left|---\right>).
+\end{align}
+
+Therefore,
+\begin{align}
+m_{\Sigma}=\left<\Sigma^0\right|M\left|\Sigma^0\right>=&2m+m_s+\frac{k}{4m^2}-\frac{6k}{4mm_s}\\
+m_{\Lambda}=\left<\Lambda^0\right|M\left|\Lambda^0\right>=&2m+m_s-\frac{3k}{4m^2}+\frac{k}{4mm_s}-\frac{3k}{4mm_s}\\
+m_{\Sigma^*}=\left<\Sigma^{*0}\right|M\left|\Sigma^{*0}\right>=&2m+m_s+\frac{k}{4m^2}+\frac{2k}{4mm_s}.
+\end{align}
+So the mass splittings are
+\begin{align}
+m_{\Sigma^*}-m_{\Sigma}=&\frac{k}{mm_s}\\
+m_{\Sigma}-m_{\Lambda}=&\frac{k}{m^2}-\frac{k}{mm_s}.
+\end{align}
+To estimate $\frac{m_s}{m}$ we take
+\begin{equation}
+\frac{m_{\Sigma}-m_{\Lambda}+m_{\Sigma^*}-m_{\Sigma}}{m_{\Sigma^*}-m_{\Sigma}}=\frac{m_{\Sigma^*}-m_{\Lambda}}{m_{\Sigma^*}-m_{\Sigma}}=\frac{m_s}{m}
+\end{equation}
+experimentally
+\begin{equation}
+\frac{m_s}{m}=\frac{m_{\Sigma^*}-m_{\Lambda}}{m_{\Sigma^*}-m_{\Sigma}}\simeq\frac{1385\text{MeV}-1116\text{MeV}}{1385\text{MeV}-1193\text{MeV}}=\frac{269}{192}\simeq1.40.
+\end{equation}
+\subsection{}
+\end{document}

@@ -1,0 +1,163 @@
+\documentclass[a4paper,11pt]{article}
+\pdfoutput=1 % if your are submitting a pdflatex (i.e. if you have
+             % images in pdf, png or jpg format)
+
+\usepackage{jheppub} % for details on the use of the package, please
+                     % see the JHEP-author-manual
+
+\usepackage[T1]{fontenc} % if needed
+\usepackage{subfiles}
+\usepackage{amsfonts}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\e}{e}
+\DeclareMathOperator{\extd}{d}
+\DeclareMathOperator{\st}{s.t.}
+\DeclareMathOperator{\Exists}{\exists}
+\DeclareMathOperator{\Forall}{\forall}
+\newcommand{\img}{\mathrm{i}}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{dyntree}
+\usepackage{coollist}
+\usepackage{ulem}
+\usepackage{cancel}
+\usepackage{youngtab}
+\usepackage{ytableau}
+\usetikzlibrary{shapes}
+\usepackage{array}
+\renewcommand{\thesubsection}{\thesection.\Alph{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\alph{subsubsection}}
+\setcounter{secnumdepth}{3}
+
+\newcommand{\fourprime}{$4'$}
+\newcommand{\threeprime}{$3'$}
+\newcommand{\twoprime}{$2'$}
+\newcommand{\oneprime}{$1'$}
+
+
+
+\hypersetup{
+   colorlinks=true,       % false: boxed links; true: colored links
+   linkcolor=black,          % color of internal links (change box color with linkbordercolor)
+   citecolor=black,        % color of links to bibliography
+   filecolor=magenta,      % color of file links
+   urlcolor=blue,           % color of external links
+   linktoc=section
+}
+
+
+
+\title{\boldmath Solutions to Lie Algebras in Particle Physics 2nd Edition}
+\author{Thomas Bourton}
+
+
+
+% e-mail addresses: one for each author, in the same order as the authors
+\emailAdd{tbourton@gmail.com}
+
+\abstract{I have written these solutions to the book by H.Georgi \cite{Georgi:1999wka} during some free time. I make no assurances or guarantees as to the validity, completeness or correctness of any of these solutions, these were put together purely as a personal exercise.}
+
+
+\begin{document} 
+
+
+\maketitle
+%\flushbottom
+\newpage
+
+\section{Chapter 1 - Finite Groups}\label{Sec:1}
+\subfile{Chapter01}
+%
+\section{Chapter 2 - Lie Groups}\label{Sec:2}
+\subfile{Chapter02}
+%
+\section{Chapter 3 - $\mathfrak{su}(2)$}\label{Sec:3}
+\subfile{Chapter03}
+
+\section{Chapter 4 - Tensor Operators}\label{Sec:4}
+\subfile{Chapter04}
+
+\section{Chapter 5 - Isospin}\label{Sec:5}
+\subfile{Chapter05}
+
+\section{Chapter 6 - Roots \& Weights}\label{Sec:6}
+\subfile{Chapter06}
+
+\section{Chapter 7 - $\mathfrak{su}(3)$}\label{Sec:7}
+\subfile{Chapter07}
+
+\section{Chapter 8 - Simple Roots}\label{Sec:8}
+\subfile{Chapter08}
+
+\section{Chapter 9 - More $\mathfrak{su}(3)$}\label{Sec:9}
+\subfile{Chapter09}
+
+\section{Chapter 10 - Tensor Methods}\label{Sec:10}
+\subfile{Chapter10}
+
+\section{Chapter 11 - Hypercharge \& Strangeness}\label{Sec:11}
+\subfile{Chapter11}
+
+\section{Chapter 12 - Young Tableux}\label{Sec:12}
+\subfile{Chapter12}
+
+\section{Chapter 13 - $\mathfrak{su}(N)$}\label{Sec:13}
+\subfile{Chapter13}
+
+\section{Chapter 14 - 3-D Harmonic Oscillator}\label{Sec:14}
+\subfile{Chapter14}
+
+\section{Chapter 15 - $\mathfrak{su}(6)$ and the Quark Model}\label{Sec:15}
+\subfile{Chapter15}
+
+\section{Chapter 16 - Color}\label{Sec:16}
+\subfile{Chapter16}
+
+\section{Chapter 17 - Constituent Quarks}\label{Sec:17}
+\subfile{Chapter17}
+
+\section{Chapter 18 - $\mathfrak{su}(5)$}\label{Sec:18}
+\subfile{Chapter18}
+
+\section{Chapter 19 - Classical Groups}\label{Sec:19}
+\subfile{Chapter19}
+
+\section{Chapter 20 - Classification Theorem}\label{Sec:20}
+\subfile{Chapter20}
+
+\section{Chapter 21 - $\mathfrak{so}(2n+1)$ \& Spinors}\label{Sec:21}
+\subfile{Chapter21}
+
+\section{Chapter 22 - $\mathfrak{so}(2n+2)$ Spinors}\label{Sec:22}
+\subfile{Chapter22}
+
+\section{Chapter 23 - $\mathfrak{su}(n)\subset\mathfrak{so}(2n)$}\label{Sec:23}
+\subfile{Chapter23}
+
+\section{Chapter 24 - $\mathfrak{so}(10)$}\label{Sec:24}
+\subfile{Chapter24}
+
+\section{Chapter 25 - Automorphisms}\label{Sec:25}
+\subfile{Chapter25}
+
+\section{Chapter 26 - $\mathfrak{sp}(2n)$}\label{Sec:26}
+\subfile{Chapter26}
+
+\section{Chapter 27 - Exceptional Algebras and Anomalies}\label{Sec:27}
+\subfile{Chapter27}
+
+%\appendix
+%\section{Some title}
+%Please always give a title also for appendices.
+
+
+%\acknowledgments
+%This is the most common positions for acknowledgments
+
+% BIBLIOGRAPHY
+% use BIBTEX if you want
+\bibliographystyle{JHEP}
+\bibliography{bibfile}
+
+\end{document}

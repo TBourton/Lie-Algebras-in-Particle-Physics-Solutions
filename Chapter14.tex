@@ -1,0 +1,69 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
+
+\subsection{Show that the operators $O^k_{ij}=a^{\dagger}_ia^{\dagger}_ja^k-\frac{1}{4}(\delta_{i}^ka^{\dagger}_la^{\dagger}_ja^l+\delta_{j}^ka^{\dagger}_la^{\dagger}_ia^l)$ transform like a tensor operator in the $(2,1)$ representation.}
+\begin{align}
+[Q_{\alpha},O_{ij}^k]=&[Q_{\alpha},a^{\dagger}_ia^{\dagger}_ja^k-\frac{1}{4}(\delta_{i}^ka^{\dagger}_la^{\dagger}_ja^l+\delta_{j}^ka^{\dagger}_la^{\dagger}_ia^l)]\\
+=&[Q_{\alpha},a^{\dagger}_i]a^{\dagger}_ja^k+a^{\dagger}_i[Q_{\alpha},a^{\dagger}_j]a^k+a^{\dagger}_ia^{\dagger}_j[Q_{\alpha},a^k]\nonumber\\
+&-\frac{1}{4}\delta_i^k\left([Q_{\alpha},a^{\dagger}_l]a_j^{\dagger}a^l+a_j^{\dagger}[Q_{\alpha},a^{\dagger}_j]a^l+a_l^{\dagger}a_j^{\dagger}[Q_{\alpha},a^l]\right)\\
+&-\frac{1}{4}\delta_j^k\left([Q_{\alpha},a^{\dagger}_l]a_i^{\dagger}a^l+a_i^{\dagger}[Q_{\alpha},a^{\dagger}_i]a^l+a_l^{\dagger}a_j^{\dagger}[Q_{\alpha},a^l]\right)\nonumber\\
+=&a^{\dagger}_l[T_{\alpha}]_i^la^{\dagger}_ja^k+a^{\dagger}_ia^{\dagger}_l[T_{\alpha}]^l_{j}a^k-a^{\dagger}_ia^{\dagger}_ja^l[T_{\alpha}^*]_{l}^k-\frac{1}{4}a_p^{\dagger}[T_{\alpha}]^p_l(\delta^k_ja_i^{\dagger}+\delta^k_ia_j^{\dagger})a^l\nonumber\\
+&-\frac{1}{4}a_p^{\dagger}a_l^{\dagger}(\delta^k_j[T_{\alpha}]^p_i+\delta^k_i[T_{\alpha}]^p_j)a^l+\frac{1}{4}a_l^{\dagger}[T^*_{\alpha}]^l_p(\delta^k_ja_i^{\dagger}+\delta^k_ia_j^{\dagger})a^p.
+\end{align}
+so the operator transforms like a $(2,1)$ tensor operator.
+\subsection{Calculate non-zero matrix elements of the operator $O^3_{11}$.}
+\subsubsection{$\left<0\right|(a_kb_k)a_iO^3_{11}a^{\dagger}_i(a^{\dagger}_l b^{\dagger}_l)\left|0\right>$ (no sum over $i$)}
+For $i=1$
+\begin{align}
+\left<0\right|(a_kb_k)a_1O^3_{11}a^{\dagger}_1(a^{\dagger}_l b^{\dagger}_l)\left|0\right>=&\left<0\right|(a_kb_k)a_1(a^{\dagger}_1)^3a_3(a^{\dagger}_l b^{\dagger}_l)\left|0\right>\\
+=&\left<0\right|(a_kb_k)a_1(a^{\dagger}_1)^3b^{\dagger}_3\left|0\right>\\
+=&\left<0\right|a_1([a_kb_k,(a^{\dagger}_1)^3]+(a^{\dagger}_1)^3a_kb_k)b^{\dagger}_3\left|0\right>\\
+=&\left<0\right|3a_1(a^{\dagger}_1)^2b_1b^{\dagger}_3\left|0\right>=0
+\end{align}
+
+For $i=2$
+\begin{align}
+\left<0\right|(a_kb_k)a_2O^3_{11}a^{\dagger}_2(a^{\dagger}_l b^{\dagger}_l)\left|0\right>=&\left<0\right|(a_kb_k)(a^{\dagger}_1)^2a_3(1+a^{\dagger}_2a_2)(a^{\dagger}_l b^{\dagger}_l)\left|0\right>\\
+=&\left<0\right|(a_kb_k)(a^{\dagger}_1)^2b^{\dagger}_3\left|0\right>\\
+=&\left<0\right|b_k([a_k,(a^{\dagger}_1)^2]+(a^{\dagger}_1)^2a_k)b^{\dagger}_3\left|0\right>\\
+=&\left<0\right|2b_2b^{\dagger}_3\left|0\right>=0
+\end{align}
+
+\subsubsection{$a^{\dagger}_ia^{\dagger}_j(a_l^{\dagger}b_l^{\dagger})\left|0\right>$}
+
+\subsection{Show that Eqn (14.13) generates standard angular momentum \underline{$r$}$\cdot$\underline{$p$}.}
+$L_3=2Q_2$, $L_1=2Q_7$, $L_2=-2Q_5$, with $Q_a=a^{\dagger}_k[T_a]_{kl}a_l$
+To check this we simply need to verify that the operators $L_i$ have the same commutation relations of those of angular momentum $[L_i,L_j]=\img \epsilon_{ijk}L_k$.
+\begin{equation}
+L_3=a_k^{\dagger}[\lambda_2]_{kl}a_l=\img(a_2^{\dagger}a_1-a_1^{\dagger}a_2)
+\end{equation}
+
+\begin{align}
+[L_1,L_2]&=-4[Q_7,Q_5]\\
+&=-\frac{4}{4}\left[a^{\dagger}_k[\lambda_2]_{kl}a_l,a^{\dagger}_{k'}[\lambda_5]_{k'l'}a_{l'}\right]\\
+&=-\left[\begin{pmatrix} a_1^{\dagger} a_2^{\dagger} a_3^{\dagger}\end{pmatrix}
+\begin{pmatrix}0&0&0\\0&0&-\img\\0&\img&0\end{pmatrix}  \begin{pmatrix}a_1^{\dagger}\\a_2^{\dagger}\\a_3^{\dagger}\end{pmatrix}, \begin{pmatrix}a_1^{\dagger}&a_2^{\dagger}&a_3^{\dagger}\end{pmatrix}  \begin{pmatrix}0&0&-\img\\0&0&0\\\img&0&0\end{pmatrix}  \begin{pmatrix}a_1^{\dagger}\\a_2^{\dagger}\\a_3^{\dagger}\end{pmatrix}\right]\\
+&=-\left[\img(a_3^{\dagger}a_2-a_2^{\dagger}a_3),\img(a_3^{\dagger}a_1-a_1^{\dagger}a_3)\right]\\
+&=-[a_3^{\dagger},a_3]a_2a^{\dagger}_1-[a_3,a_3^{\dagger}]a_2^{\dagger}a_1\\
+&=a_1^{\dagger}a_2-a_2^{\dagger}a_1=\img L_3
+\end{align}
+Where the second from last line is given by the commutation relations $[a_k,a_j]=0$, $[a_j,a^{\dagger}_k]=\delta_{kj}$. The other relations can be found in a similar fashion giving,
+\begin{align}
+[L_1,L_3]&=-\img L_2\\
+[L_2,L_3]&=\img L_1
+\end{align}
+so the operators generate the standard angular momentum.
+
+
+\subsection{Show $[Q_{\alpha},a_kb_k]=0$}
+\begin{align}
+[Q_{\alpha},a_kb_k]&=\frac{1}{4}\left[ a^{\dagger}_{k'}[\lambda_{\alpha}]_{k'l'}a_{l'}-b^{\dagger}_{k'}[\lambda^*_{\alpha}]_{k'l'}b_{l'} ,a_kb_k \right]\\
+&=\frac{1}{4}\left([\lambda_{\alpha}]_{k'l'} [a^{\dagger}_{k'},a_k]b_ka_{l'} -[\lambda^*_{\alpha}]_{k'l'}a_k[b^{\dagger}_{k'},b_k]b_{l'}         \right)\\
+&=\frac{1}{4}\left([\lambda_{\alpha}]_{kl'}b_ka_{l'} -[\lambda^*_{\alpha}]_{kl'}a_kb_{l'}         \right).
+\end{align}
+But $\lambda^*_{\alpha}=(\lambda^{\dagger}_{\alpha})^T$ but because $\lambda_{\alpha}$'s Hermitian then $[\lambda^*_{\alpha}]_{kl}=[\lambda_{\alpha}^T]_{kl}=[\lambda_{\alpha}]_{lk}$
+\begin{equation}
+[Q_{\alpha},a_kb_k]=\frac{1}{4}\left([\lambda_{\alpha}]_{kl'}b_ka_{l'} -[\lambda_{\alpha}]_{l'k}a_kb_{l'}         \right)=0
+\end{equation}
+after relabelling.
+\end{document}

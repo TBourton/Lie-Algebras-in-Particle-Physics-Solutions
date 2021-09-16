@@ -1,0 +1,222 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
+\subsection{Decompose the product of tensor components $u^iv^{jk}$, $v^{jk}=v^{kj}$ is a $6$ of $\mathfrak{su}(3)$.}
+$u^iv^{jk}$ is a $3\otimes6$ or $(1,0)\otimes(2,0)$. We must construct the product $\st$ the terms are traceless and symmetric. The idea is to first write out the relation in terms which have definite symmetry properties
+\begin{align}
+u^iv^{jk}=\frac{1}{3}(u^iv^{jk}+u^jv^{ik}+u^kv^{ij}) +\frac{1}{3}(2u^iv^{jk}-u^jv^{ik}-u^kv^{ij})
+\end{align}
+The first term is completely symmetric in $i,j,k$, which the second term in antisymmetric in $i,j$ and $i,k$ which it is symmetric in $j,k$.
+\begin{align}
+u^iv^{jk}=\frac{1}{3}(u^iv^{jk}+u^jv^{ik}+u^kv^{ij})+\frac{1}{3}(\epsilon^{ikl}\epsilon_{lnm}u^nv^{jm}+\epsilon^{jil}\epsilon_{lnm}u^nv^{mk})
+\end{align}
+Therefore we acquire the known decomposition $3\otimes6=10\oplus8$ or $(1,0)\otimes(2,0)=(3,0)\oplus(1,1)$.
+
+\subsection{Find the matrix elements $\left<u|T_a|v\right>$ where $\left|u\right>,\left|v\right>\in(1,1)$ (adjoint) representation and $T_a=\frac{1}{2}\lambda_a$}
+We have $\left|v\right>=\left|^i_j\right>v_i^j$.
+So 
+\begin{align}
+T_a\left|v\right>=\left|T_av\right>&=T_av^j_i\left|^i_j\right>=[T_a]^j_kv^k_i\left|^i_j\right>-[T_a]^k_iv^j_k\left|^i_j\right>\\
+&=\frac{1}{2}([\lambda_a]^j_kv^k_i-[\lambda_a]^k_iv^j_k)\left|^i_j\right>.
+\end{align}
+So that the matrix elements are given by
+\begin{align}
+\left<u|T_a|v\right>&=\frac{1}{2}\bar u^m_n([\lambda_a]^j_kv^k_i-[\lambda_a]^k_iv^j_k)\left<^m_n|^i_j\right>\\
+&=\frac{1}{2}\bar u^m_n([\lambda_a]^j_kv^k_i-[\lambda_a]^k_iv^j_k)\delta^i_m\delta^n_j\\
+&=\frac{1}{2}\bar u^i_j([\lambda_a]^j_kv^k_i-[\lambda_a]^k_iv^j_k).
+\end{align}
+
+
+\subsection{$\forall$ weights $\in6$ of $\mathfrak{su}(3)$ find the corresponding tensor components $v^{ij}$}
+The $6$ of $\mathfrak{su}(3)$ has highest weight $2\mu^1=(2,0)=\left|1,\frac{1}{\sqrt{3}}\right>\equiv\left|_{1,1}\right>$
+The remaining five weights are
+\begin{align}
+(0,1)&=2\mu^1-\alpha^1=\left|\frac{1}{2},-\frac{\sqrt{3}}{6}\right>\equiv\left|_{1,2}\right>\\
+(1,-1)&=2\mu^1-2\alpha^1=\left|0,-\frac{2}{\sqrt{3}}\right>\equiv\left|_{1,3}\right>\\
+(-2,2)&=2\mu^1-\alpha^1-\alpha^2=\left|0,-\frac{1}{\sqrt{3}}\right>\equiv\left|_{2,2}\right>\\
+(-1,0)&=2\mu^1-2\alpha^1-\alpha^2=\left|-\frac{1}{2},-\frac{\sqrt{3}}{6}\right>\equiv\left|_{2,3}\right>\\
+(0,-2)&=2\mu^1=\left|-1,\frac{1}{\sqrt{3}}\right>\equiv\left|_{3,3}\right>
+\end{align}
+The tensor components corresponding to the highest weight of the $6$ is given by $v_{h}^{ij}=v^{ij}_{11}=N\delta_1^i\delta^j_1$, with $N=1$. The remaining components are
+\begin{align}
+v_{12}^{ij}&=\frac{1}{\sqrt{2}}(\delta^i_1\delta^j_2+\delta_2^i\delta^j_1)\\
+v_{13}^{ij}&=\frac{1}{\sqrt{2}}(\delta^i_1\delta^j_3+\delta_3^i\delta^j_1)\\
+v_{23}^{ij}&=\frac{1}{\sqrt{2}}(\delta^i_2\delta^j_3+\delta_3^i\delta^j_2)\\
+v_{33}^{ij}&=\delta^i_3\delta^j_3\\
+v_{22}^{ij}&=\delta^i_2\delta^j_2.
+\end{align}
+
+\subsection{$\mathfrak{su}(2)$ tensor methods}
+\subsubsection{Repeat problem (5.C) suing the $\mathfrak{su}(2)$ tensor methods.}
+The equation we need is equation (10.82) in Georgi.
+\begin{equation}
+p+\pi^+=\left|1/2,1/2\right>\left|1,1\right>=\left|3/2,3/2\right>=\left|\Delta^{++}\right>={{3}\choose{3}}^{-1/2}\left|v_{3/2,3/2}\right>=\left|v_{3/2,3/2}\right>.
+\end{equation}
+Therefore Prob$(p+\pi^+\rightarrow\Delta^{++})=1$. 
+\begin{align}
+\text{Prob}(p+\pi^-\rightarrow\Delta^{0})&=|\left<3/2,-1/2|1/2,1/2\right>\left|1,1\right>|^2\\
+&=|\left<3/2,-1/2\right|\left<3/2,-1/2|3/2,-1/2\right>\left|1/2,1/2\right>\left|1,1\right>|\\
+&=\left|{{1}\choose{1}}^{1/2}{{2}\choose{0}}^{1/2}{{3}\choose{1}}^{-1/2}\left|3/2,-1/2\right>\right|^2\\
+&=\frac{1}{3}.
+\end{align}
+Which agrees with the result from Problem(5.C).
+\subsubsection{Find the Clebsch-Gordon coefficient $\left<3/2,1/2|1,3/2,0,1/2\right>$ by finding the state $\left|3/2,1/2\right>$ in $3/2\otimes1$ and compare it to eqn(10.94).}
+To begin with we use $3/2\otimes1=5/2\oplus3/2\oplus1/2$. Apply the lowering operators to the highest weight state $\left|3/2,3/2\right>\left|1,1\right>=\left|5/2,5/2\right>$.
+\begin{align}
+\left|5/2,3/2\right>&=\sqrt{\frac{2}{5}}J^-\left|5/2,5/2\right>\\
+&=\sqrt{\frac{2}{5}}J^-\left|3/2,3/2\right>\left|1,1\right>\\
+&=\sqrt{\frac{2}{5}}\left(\sqrt{\frac{3}{2}}\left|3/2,1/2\right>\left|1,1\right>+\left|3/2,3/2\right>\left|1,0\right>\right)
+\end{align}
+which is a spin $3/2$ state $\in$ spin the $5/2$ rep and therefore the orthogonal state $\left|v\right>$ is the highest weight state $\in$ spin $3/2$ rep.
+\begin{align}
+\left<v|5/2,3/2\right>=&0\\
+=&\left<v\right|\left(\sqrt{\frac{3}{5}}\left|3/2,1/2\right>\left|1,1\right>+\sqrt{\frac{2}{5}}\left|3/2,3/2\right>\left|1,0\right>\right)
+\end{align}
+So, 
+\begin{align}
+\left|v\right>&=\sqrt{\frac{2}{5}}\left|3/2,1/2\right>\left|1,1\right>-\sqrt{\frac{3}{5}}\left|3/2,3/2\right>\left|1,0\right>\\
+&\equiv\left|3/2,3/2\right>
+\end{align}
+Applying the lowering operators to this state
+\begin{align}
+\left|3/2,1/2\right>=&\sqrt{\frac{2}{3}}J^-\left|3/2,3/2\right>\\
+=&\frac{\sqrt{2}}{\sqrt{15}}\Big(\left|3/2,-1/2\right>\left|1,1\right>+\sqrt{2}\left|3/2,1/2\right>\left|1,0\right>\nonumber\\
+&\qquad\quad-\frac{3}{\sqrt{2}}\left|3/2,1/2\right>\left|1,0\right>-\sqrt{3}\left|3/2,3/2\right>\left|1,-1\right>\Big)
+\end{align}
+So that the Clebsch-Gordon coefficient 
+\begin{equation}
+\left<3/2,1/2|1,3/2,0,1/2\right>=\frac{1}{\sqrt{15}}.
+\end{equation}
+By equation (10.94)
+\begin{equation}
+\begin{split}
+&\left<s_1+s_2-1,m_1+m_2|s_1,s_2,m_1,m_2\right>\\
+&=\binom{2s_1}{s_1+m_1}^{-1/2}\binom{2s_2}{s_2+m_2}^{-1/2}\left(\frac{2s_1s_2}{s_1+s_2}\right)^{1/2}\binom{2s_1+2s_2-2}{s_1+s_2-1+m_1+m_2}^{-1/2}\\
+&\quad\cdot\Big[\binom{2s_1-1}{s_1+m_1-1}\binom{2s_2-1}{s_2+m_2}-\binom{2s_1-1}{s_1+m_1}\binom{2s_2-1}{s_2+m_2-1}\Big].
+\end{split}
+\end{equation}
+so that
+\begin{align}
+\left<3/2,1/2|1,3/2,0,1/2\right>=&\binom{3}{2}^{-1}\binom{2}{1}^{-1/2}\left(\frac{6}{5}\right)^{1/2}\Big[\binom{2}{1}\binom{1}{1}-\binom{2}{2}\binom{1}{0}\Big]\\
+=&\frac{1}{\sqrt{15}}.
+\end{align}
+
+\subsection{$\pi p$ scattering }
+We are given
+\begin{align}
+\pi^+p\rightarrow\pi^+p, &\qquad A_{+p}=\left<\pi^+p|H_I|\pi^+p\right>\\
+\pi^-p\rightarrow\pi^-p ,&\qquad A_{-p}=\left<\pi^-p|H_I|\pi^-p\right>\\
+\pi^-p\rightarrow\pi^0n ,&\qquad A_{0n}=\left<\pi^0n|H_I|\pi^-p\right>
+\end{align}
+where $H_I$ is the interaction Hamiltonian which is approximately $\mathfrak{su}(3)$ invariant. The pion and nucleon wavefunctions can be described by $\mathfrak{su}(2)$ tensors $\pi^{ij}=\pi^{ji}$ and $N^j$ respectively. Thus the most general amplitude is
+\begin{equation}
+\left<\pi N|H_I|\pi N\right>=A_1\bar{\pi}^{jk}\bar{N}_l\pi^{jk}N^l+A_2\bar{\pi}_{jk}\bar{N}_l\pi^{jl}N^k
+\end{equation}
+
+\subsubsection{Write out the three scattering amplitudes in terms of $A_1$ and $A_2$}
+Begin by writing out the states in tensor form
+\begin{align}
+\left|\pi^+\right>=&\left|1,1\right>=\binom{2}{2}^{-1/2}\pi_{11}^{jk}\left|_{jk}\right>=\delta_1^j\delta_1^k\left|_{jk}\right>\\
+\left|\pi^-\right>=&\left|1,-1\right>=\binom{2}{0}^{-1/2}\pi^{ij}_{1,-1}\left|_{ij}\right>=\delta^i_2\delta^j_2\left|_{ij}\right>\\
+\left|\pi^0\right>=&\left|1,0\right>=\binom{2}{1}^{-1/2}\pi^{ij}_{1,0}\left|_{ij}\right>=\frac{1}{\sqrt{2}}(\delta^i_1\delta^j_2+\delta^i_2\delta^j_1)\left|_{ij}\right>\\
+\left|p\right>=&\left|1/2,1/2\right>=\binom{1}{1}^{-1/2}N^i\left|_i\right>=\delta^i_1\left|_i\right>\\
+\left|n\right>=&\left|1/2,-1/2\right>=\binom{1}{0}^{-1/2}N^i\left|_i\right>=\delta^i_2\left|_i\right>.
+\end{align}
+For $\left|\pi^+p\right>=\left|1,1\right>\otimes\left|1/2,1/2\right>$
+\begin{align}
+\left<\pi^+p|H_I|\pi^+p\right>=&A_1\delta^1_j\delta^1_k\delta^1_l\delta^j_1\delta_1^k\delta^l_1+A_2\delta^1_j\delta^1_k\delta^1_l\delta^j_1\delta_1^k\delta^l_1\\
+=&A_1+A_2=A_{+p}.
+\end{align}
+For $\left|\pi^-p\right>=\left|1,-1\right>\otimes\left|1/2,1/2\right>$
+\begin{align}
+\left<\pi^-p|H_I|\pi^-p\right>=&A_1\delta^2_j\delta^2_k\delta^1_l\delta^j_2\delta_2^k\delta^l_1+A_2\delta^2_j\delta^2_k\delta^1_l\delta^j_2\delta_2^l\delta^k_1\\
+=&A_1=A_{-p}.
+\end{align}
+For $\left|\pi^0n\right>=\left|1,0\right>\otimes\left|1/2,-1/2\right>$
+\begin{align}
+\left<\pi^0n|H_I|\pi^-p\right>=&A_1\frac{1}{\sqrt{2}}(\delta^1_j\delta^2_k+\delta^2_j\delta^1_k)\delta^2_l\delta^j_2\delta^k_2\delta^l_2+A_2\frac{1}{\sqrt{2}}(\delta^1_j\delta^2_k+\delta^2_j\delta^1_k)\delta^2_l\delta^j_2\delta^k_1\delta^l_2\\
+=&\frac{1}{\sqrt{2}}A_2=A_{0n}.
+\end{align}
+
+\subsubsection{Write out the scattering amplitudes in terms of $I=3/2$ and $I=1/2$ amplitudes by decomposing $\pi N$ states into irrep $I=3/2$ and $I=1/2$ reps and using Schur's lemma. Write them in terms of $A_1$ and $A_2$.}
+Because $H_I$ is taken to be $\mathfrak{su}(3)$ invariant so $[T_a,H_I]=0$. Then, by Schur's lemma, $H_I\propto\mathbb{I}$. Thus, 
+\begin{equation}\label{eq:10scatamp}
+\left<s',m'|H_I|s,m\right>=\delta_{ss'}\delta_{mm'}\sum_sa_s\phi(s)^{\dagger}\phi(s),
+\end{equation} 
+where $\phi(s)$ are states belonging to the spin $s$ rep, in this case the spin $1/2$ and $3/2$ reps, and $a_s$ is the amplitude in the spin $s$ rep.
+
+We must first write out the pion-nucleon states in terms of spin $3/2$ and spin $1/2$ states.
+\begin{align}
+\left|\pi^+p\right>=&\left|1,1\right>\otimes\left|1/2,1/2\right>=\left|3/2,3/2\right>\\ \left|\pi^-n\right>=&\left|1,-1\right>\otimes\left|1/2,-1/2\right>=\left|3/2,-3/2\right>
+\end{align}
+are the highest and lowest weights.
+
+For the other states, apply the lowering operators
+\begin{align}
+\left|3/2,1/2\right>=&\sqrt{\frac{2}{3}}J^-\left|3/2,3/2\right>\\
+=&\sqrt{\frac{2}{3}}J^-\left|1,1\right>\left|1/2,1/2\right>\\
+=&\sqrt{\frac{2}{3}}\left|1,0\right>\left|1/2,1/2\right>+\sqrt{\frac{1}{3}}\left|1,1\right>\left|1/2,-1/2\right>\\
+=&\sqrt{\frac{2}{3}}\left|\pi^0p\right>+\sqrt{\frac{1}{3}}\left|\pi^+n\right>.
+\end{align}
+and
+\begin{align}
+\left|3/2,-1/2\right>=&\sqrt{\frac{1}{2}}J^-\left|3/2,1/2\right>\\
+=&\sqrt{\frac{1}{3}}\left|1,-1\right>\left|1/2,1/2\right>+\sqrt{\frac{2}{3}}\left|1,0\right>\left|1/2,-1/2\right>\\
+=&\sqrt{\frac{1}{3}}\left|\pi^-p\right>+\sqrt{\frac{2}{3}}\left|\pi^0n\right>.
+\end{align}
+
+The orthogonal spin $1/2$ states are then given by
+\begin{align}
+\left|1/2,1/2\right>=&\sqrt{\frac{1}{3}}\left|\pi^0p\right>-\sqrt{\frac{2}{3}}\left|\pi^+n\right>\\
+\left|1/2,-1/2\right>=&\sqrt{\frac{2}{3}}\left|\pi^-p\right>-\sqrt{\frac{1}{3}}\left|\pi^0n\right>.
+\end{align}
+Now we can rearrange to find the pion-nucleon states in terms of spin $3/2$ and spin $1/2$ reps.
+
+Firstly, the $m=1/2$ states
+\begin{align}
+\left|\pi^0p\right>=&\sqrt{3}\left|1/2,1/2\right>+\sqrt{2}\left|\pi^+n\right>\\
+\left|\pi^0p\right>=&\sqrt{\frac{3}{2}}\left|3/2,1/2\right>-\frac{1}{\sqrt{2}}\left|\pi^+n\right>\\
+\end{align}
+So,
+\begin{align}
+\left|\pi^0p\right>=&\frac{1}{\sqrt{3}}\left|1/2,1/2\right>+\sqrt{\frac{2}{3}}\left|3/2,1/2\right>\\
+\left|\pi^+n\right>=&-\sqrt{\frac{2}{3}}\left|1/2,1/2\right>+\frac{1}{\sqrt{3}}\left|3/2,1/2\right>.
+\end{align}
+Similarly,
+\begin{align}
+\left|\pi^0n\right>=&-\frac{1}{\sqrt{3}}\left|1/2,-1/2\right>+\sqrt{\frac{2}{3}}\left|3/2,-1/2\right>\\
+\left|\pi^-p\right>=&\sqrt{\frac{2}{3}}\left|1/2,-1/2\right>+\frac{1}{\sqrt{3}}\left|3/2,-1/2\right>.
+\end{align}
+
+Now we are ready to calculate the scattering amplitudes by applying these states and \eqref{eq:10scatamp}. Firstly,
+\begin{equation}
+\left<\pi^+p|H_I|\pi^+p\right>=\left<3/2,3/2|H_I|3/2,3/2\right>=a_{3/2}\left<3/2,3/2|3/2,3/2\right>=a_{3/2}
+\end{equation}
+ and
+ \begin{align}
+ \left<\pi^-p|H_I|\pi^-p\right>=&\left(\sqrt{\frac{2}{3}}\left<1/2,-1/2\right|+\frac{1}{\sqrt{3}}\left<3/2,-1/2\right|\right)|H_I|\left(\sqrt{\frac{2}{3}}\left|1/2,-1/2\right>+\frac{1}{\sqrt{3}}\left|3/2,-1/2\right>\right)\\
+ =&\frac{2}{3}a_{1/2}+\frac{1}{3}a_{3/2}.
+ \end{align}
+Finally,
+ \begin{align}
+ \left<\pi^0n|H_I|\pi^-p\right>=&\left(-\frac{1}{\sqrt{3}}\left<1/2,-1/2\right|+\sqrt{\frac{2}{3}}\left<3/2,-1/2\right|\right)|H_I|\left(\sqrt{\frac{2}{3}}\left|1/2,-1/2\right>+\frac{1}{\sqrt{3}}\left|3/2,-1/2\right>\right)\\
+ =&-\frac{\sqrt{2}}{3}a_{1/2}+\frac{\sqrt{2}}{3}a_{3/2}.
+ \end{align}
+
+Then
+\begin{align}
+A_{+P}=&A_1+A_2=a_{3/2}\\
+A_{-P}=&A_1=\frac{2}{3}a_{1/2}+\frac{1}{3}a_{3/2}\\
+A_{0n}=&\frac{1}{\sqrt{2}}A_2=-\frac{\sqrt{2}}{3}a_{1/2}+\frac{\sqrt{2}}{3}a_{3/2}.
+\end{align}
+and solving the simultaneous equations yields
+\begin{align}
+a_{3/2}=&A_1+A_2\\
+a_{1/2}=&A_1-\frac{1}{2}A_2.
+\end{align}
+%$\left|1,m_1\right>\otimes\left|1/2,m_{1/2}\right>=V_{3/2,m_1+m_{1/2}}^{ijk}\left|_{ijk}\right>+W_{1/2,m%_1+m_{1/2}}^i\left|_i\right>$.
+%\begin{align}
+%A_{+p}=&\left<\pi^+p|H_I|\pi^+p\right>=\left<3/2,3/2|H_I|3/2,3/2\right>=A_1\bar{V}_{3/2}^{ijk}V_{3/2}^{i%jk}+A_2\bar{V}_{3/2,3/2}^{ijk}V_{3/2,3/2}^{ikj}\\
+%=&A_1\delta_i^1\delta_j^1\delta_k^1\delta^i_1\delta^j_1\delta^k_1+A_2\delta_i^1\delta_j^1\delta_k^1\delt%a^i_1\delta^k_1\delta^j_1\\
+%=&A_1+A_2.
+%\end{align}
+\end{document}

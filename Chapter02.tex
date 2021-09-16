@@ -1,0 +1,77 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
+\subsection{Calculate the matrix $\e^{\img\alpha A}$}
+\begin{equation}
+A=\begin{pmatrix} 0 & 0 & 1  \\ 0 & 0 & 0 \\ 1 & 0 & 0  \end{pmatrix}
+\end{equation}
+For some generator $X_a$, e$^{\img\alpha_aX_a}=\sum_{k=0}^{k=\infty}{\frac{(\img\alpha_aX_a)^k}{n!}}$.
+\begin{equation}
+A^2=AA=\begin{pmatrix} 1 & 0 & 0  \\ 0 & 0 & 0 \\ 0 & 0 & 1  \end{pmatrix}
+\end{equation}
+\begin{equation}
+A^3=AAA=\begin{pmatrix}  0 & 0 & 1  \\ 0 & 0 & 0 \\ 1 & 0 & 0  \end{pmatrix}=A
+\end{equation}
+So,
+\begin{equation}
+A^n = \begin{cases} A & \quad \text{if } n \text{ odd}\\ AA & \quad \text{if } n \text{ even}\\ \end{cases}
+\end{equation}
+\begin{align}
+\e^{\img\alpha A}&=\mathbb{I} + \img\alpha A +\frac{(\img\alpha A)^2}{2!} + ...\\
+&=\begin{pmatrix}  \sum_{n=0}^{n=\infty}{(-1)^n\frac{\alpha^{2n}}{(2n)!}}  & 0 & \img\sum_{n=0}^{n=\infty}{(-1)^n\frac{\alpha^{2n+1}}{(2n+1)!}}+...  \\ 0 & 1 & 0 \\ \img\sum_{n=0}^{n=\infty}{(-1)^n\frac{\alpha^{2n+1}}{(2n+1)!}} & 0 & \sum_{n=0}^{n=\infty}{(-1)^n\frac{\alpha^{2n}}{(2n)!}}  \end{pmatrix}\\
+&=\begin{pmatrix}  \cos{(\alpha)} & 0 & \img\sin{(\alpha)}  \\ 0 & 1 & 0 \\ \img\sin{(\alpha)} & 0 & \cos{(\alpha)}  \end{pmatrix}
+\end{align}
+%
+\subsection{$[A,B]=B$ calculate $\e^{\img\alpha A}B\e^{-\img\alpha A}$}
+Let
+\begin{equation}
+B =\begin{pmatrix}  a & b & c  \\ d & e & f \\ g & h & i  \end{pmatrix}.
+\end{equation}
+Then 
+\begin{equation}
+[A,B]=\begin{pmatrix}  g-c & h & i-a  \\ -f & 0 & -d \\ a-i & b & c-g  \end{pmatrix}=B
+\end{equation}
+Comparing components we get the simultaneous equations
+\begin{align}
+a=&g-c\\
+a=&i+g\\
+a=&i-c\\
+i=&c-g\\
+b=&h\\
+d=&-f\\
+e=&0.
+\end{align}
+but this implies $g=-c$, $i=2c$ so $a=c$, but then $a=g-c=-2a\implies a=0$. So then $B$ must be given by
+\begin{equation}
+B=\begin{pmatrix}  0 & b & 0  \\ d & 0 & -d \\ 0 & b & 0  \end{pmatrix}.
+\end{equation}
+So,
+\begin{align}
+\e^{\img\alpha A}B\e^{-\img\alpha A}&=\begin{pmatrix}  \cos{(\alpha)} & 0 & \img\sin{(\alpha)}  \\ 0 & 1 & 0 \\ \img\sin{(\alpha)} & 0 & \cos{(\alpha)}  \end{pmatrix}\begin{pmatrix}  0 & b & 0  \\ d & 0 & -d \\ 0 & b & 0  \end{pmatrix}\begin{pmatrix}  \cos{(\alpha)} & 0 & -\img\sin{(\alpha)}  \\ 0 & 1 & 0 \\ -\img\sin{(\alpha)} & 0 & \cos{(\alpha)}  \end{pmatrix}.\\
+&=\begin{pmatrix}  0 & b(\cos{(\alpha)}+\img\sin{(\alpha)}) & 0  \\ d(\cos{(\alpha)}+\img\sin{(\alpha)}) & 0 & -d(\cos{(\alpha)}+\img\sin{(\alpha)}) \\ 0 & b(\cos{(\alpha)}+\img\sin{(\alpha)}) & 0 \end{pmatrix}\\
+&=\begin{pmatrix}  0 & b\e^{\img\alpha} & 0  \\ d\e^{\img\alpha} & 0 & -d\e^{\img\alpha} \\ 0 & b\e^{\img\alpha} & 0 \end{pmatrix}
+\end{align}
+
+\subsection{Carry out the expansion of $\delta_c$ in $\e^{\img\alpha_aX_a}\e^{\img\beta_bX_b}=\e^{\img\delta_cX_c}$ to third order in $\alpha$ and $\beta$}
+\textit{Note: the \textit{Mathematica} package NCAlgebra \cite{NCalgebra} is very useful for calculations like these + a variety of other Non-commutative algebra problems.}
+Taking the logarithm of both side of $\e^{\img\alpha_aX_a}\e^{\img\beta_bX_b}=\e^{\img\delta_cX_c}$ gives 
+\begin{equation}
+\img\delta_cX_c=\log{\left(1+\e^{\img\alpha_aX_a}\e^{\img\beta_bX_b}-1\right)}.
+\end{equation}
+Then let $K=\e^{\img\alpha_aX_a}\e^{\img\beta_bX_b}-1$ and then we taylor expand $\log{(K+1)}$.
+
+Expanding $K$ to third order
+\begin{align}
+K=&\e^{\img\alpha_aX_a}\e^{\img\beta_bX_b}-1\\
+=&(1+\img\alpha_aX_a-\frac{1}{2}(\alpha_aX_a)^2-\frac{\img}{6}(\alpha_aX_a)^3)+(1+\img\beta_bX_b-\frac{1}{2}(\beta_bX_b)^2-\frac{\img}{6}(\beta_bX_b)^3)-1\\
+=&-\alpha_a\beta_bX_aX_b-\frac{\img}{2}\alpha_a\beta_b^2X_aX_b^2+\frac{\img}{2}\alpha_a^2\beta_bX_a^2X_b+\img\alpha_aX_a-\frac{1}{2}\alpha_a^2X_a^2\nonumber\\
+&-\frac{\img}{6}\alpha_a^3X_a^3+\img\beta_bX_b-\frac{1}{2}\beta_b^2X_b^2-\frac{\img}{6}\beta_b^3X_b^3+...
+\end{align}
+Then, to third order
+\begin{align}
+\img\delta_cX_c=&\log{(K+1)}=K-\frac{1}{2}KK+\frac{1}{3}KKK+...\\
+=&\img\alpha_aX_a+\img\beta_bX_b-\frac{1}{2}\alpha_a\beta_b[X_a,X_b]+\frac{\img}{6}\alpha_a^2\beta_b\left(X_aX_bX_a-\frac{1}{2}X_bX_a^2-\frac{1}{2}X_a^2X_b\right)\nonumber\\
+&+\frac{\img}{6}\alpha_a\beta_b^2\left(X_bX_aX_b-\frac{1}{2}X_b^2X_a-\frac{1}{2}X_aX_b^2\right)+...\\
+=&\img\alpha_aX_a+\img\beta_bX_b-\frac{1}{2}\alpha_a\beta_b[X_a,X_b]-\frac{\img}{12}\alpha_a^2\beta_b[X_a,[X_a,X_b]]-\frac{\img}{12}\alpha_a\beta_b^2[X_b,[X_b,X_a]]+...
+\end{align}
+
+\end{document}

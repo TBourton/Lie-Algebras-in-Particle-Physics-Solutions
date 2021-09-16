@@ -1,0 +1,57 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
+\subsection{Show that $\mathfrak{su}(N)$ has a $\mathfrak{su}(N-1)$ subalgebra. How do the fundamental representations of $\mathfrak{su}(N)$ decompose into $\mathfrak{su}(N-1)$ reps?}
+Look for $\mathfrak{su}(N-1)\in\mathfrak{su}(N)$. The simple roots of $\mathfrak{su}(N)$ are $\alpha^i=\nu^i-\nu^{i+1}$, $i=1\dots N-1$. Which form a basis for a $\mathbb{R}^{N-1}$ root space, from which we may construct the full $\mathfrak{su}(N)$ algebra. If we limit $i=1 \dots N-2$ then the simple roots form a basis for a $\mathfrak{su}(N-1)$ algebra, therefore $\mathfrak{su}(N-1)\in\mathfrak{su}(N)$.
+
+For $\mathfrak{su}(N)$ the weights in the fundamental representation are $\mu^j=\sum_{k=1}^{j}{\nu^k}$ for $j\leq N-1$ and for $\mathfrak{su}(N-1)$ the weights in the defining representation are $\mu^j=\sum_{k=1}^{j}{\nu^k}$ for $j\leq N-2$. Then the raising and lowering operators $E_i$ of $\mathfrak{su}(N-1)$ move between the $N-2$ weights $\nu^1\dots\nu^{N-2}$ and the $\nu^{N-1}$ state cannot be reached and is an invariant subspace under $\mathfrak{su}(N-1)$. Thus $N=N-1\oplus1$
+
+\subsection{Find $[3]\otimes[1]$ in $\mathfrak{su}(5)$ and check the dimensions}
+
+\begin{equation}
+\young(\hfil,\hfil,\hfil)\otimes\young(a)=\young(\hfil a,\hfil,\hfil)\oplus \young(\hfil,\hfil,\hfil,a)=[3,1]\oplus[4].
+\end{equation}
+
+The dimensions are 
+dim$([3]\otimes[1])=\frac{5.4.3}{3.2}.5=50$, dim$([3,1])=\frac{5.6.4.3}{2.4}=45$, dim$([4])=\frac{5.4.3.2}{2.3.4}=5$. Therefore the dimensions work out.
+
+\subsection{Find $[3,1]\otimes[2,1]$} 
+\begin{align}
+[3,1]\otimes[2,1]=&\young(\hfil\hfil,\hfil,\hfil)\otimes\young(aa,b)\\
+=&\young(\hfil\hfil aa,\hfil,\hfil)\rightarrow\sout{\young(\hfil\hfil aab,\hfil,\hfil)}\oplus\young(\hfil\hfil aa,\hfil b,\hfil)\oplus\young(\hfil\hfil aa,\hfil,\hfil,b)\nonumber\\
+&\young(\hfil\hfil a,\hfil a,\hfil)\rightarrow\sout{\young(\hfil\hfil ab,\hfil a,\hfil)}\oplus\young(\hfil\hfil a,\hfil ab,\hfil)\oplus\young(\hfil\hfil a,\hfil a,\hfil,b)\oplus\young(\hfil\hfil a,\hfil a,\hfil b)\\
+&\young(\hfil\hfil,\hfil a,\hfil a)\rightarrow\sout{\young(\hfil\hfil b,\hfil a,\hfil a)}\sout{\oplus\young(\hfil\hfil,\hfil ab,\hfil a)}\oplus\sout{\young(\hfil\hfil,\hfil a,\hfil ab)}\oplus\sout{\young(\hfil\hfil,\hfil a,\hfil a,b)}\nonumber\\
+%
+&=\young(\hfil\hfil aa,\hfil b,\hfil)\oplus\young(\hfil\hfil aa,\hfil,\hfil,b)
+\oplus\young(\hfil\hfil a,\hfil ab,\hfil)\oplus\young(\hfil\hfil a,\hfil a,\hfil,b)\oplus\young(\hfil\hfil a,\hfil a,\hfil b)\\
+&=[3,2,1,1]\oplus[4,1,1,1]\oplus[3,2,2]\oplus[4,2,1]\oplus[3,3,1]
+\end{align}
+
+\subsection{Under the subalgebra $\mathfrak{su}(N)\otimes\mathfrak{su}(M)\otimes\mathfrak{u}(1)\in\mathfrak{su}(N+M)$ how do the fundamental representations and the adjoint representations of $\mathfrak{su}(N+M)$ transform?} 
+
+The fundamental/defining representations transforms as
+\begin{equation}
+\young(\hfil)=\left(\young(\hfil)\quad \bullet\right)_{M} \oplus \left( \bullet\quad \young(\hfil)\right)_{-N}
+\end{equation}
+The adjoint representation
+\begin{equation}\label{eq:adjdec}
+\mathfrak{su}(N+M)_{adj}\oplus1=(N+M)\otimes\bar{(N+M)}
+\end{equation}
+
+Where $(N+M)$ is the defining rep of $\mathfrak{su}(N+M)$. The product contains two $\mathfrak{u}(1)$ factors, one of which is equal to the $1$ on the LHS of \eqref{eq:adjdec} while the other contributes the $\mathfrak{u}(1)$ factor towards $\mathfrak{su}(N)\otimes\mathfrak{su}(M)\otimes\mathfrak{u}(1)$. So
+\begin{equation}
+\mathfrak{su}(N+M)_{adj}=\left(\left(\young(\hfil)\quad \bullet\right)_{M} \oplus \left( \bullet\quad \young(\hfil)\right)_{-N}\right)\otimes\left(\overline{\left(\young(\hfil)\quad \bullet\right)}_{\bar{M}} \oplus  \overline{\left(\bullet\quad \young(\hfil)\right)}_{-\bar{N}}\right)
+\end{equation}
+
+\subsection{Find $[2]\otimes[1,1]$ in $\mathfrak{su}(N)$}
+
+\begin{equation}
+[2]\otimes[1,1]=\young(\hfil,\hfil)\otimes\young(aa)=\young(\hfil aa,\hfil)\oplus\young(\hfil a,\hfil,a)=[2,1,1]\oplus[3,1]
+\end{equation}
+\begin{equation}
+\text{dim}([2]\otimes[1,1])=\frac{N(N-1)}{2}\frac{N(N+1)}{2}=\frac{N^2(N-1)(N+1)}{4}
+\end{equation}
+\begin{align}
+\text{dim}([2,1,1]\oplus[3,1])&=\frac{N(N+1)(N+2)(N-1)}{8}\oplus\frac{N(N+1)(N-2)(N-1)}{8}\\&
+=\frac{N^2(N+1)(N-1)}{4}=\text{dim}([2]\otimes[1,1])
+\end{align}
+\end{document}

@@ -1,0 +1,65 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
+\subsection{$X\rightarrow\pi^i\pi^i$ production.}
+We know that in terms of isospin $\left|\pi\pi\right>=1\otimes1=0\oplus1\oplus2$ and the pions are spin-$0$ singlets made up of a quark-antiquark pair. The isospin 0 and 2 final states are anti-symmetric in the exchange of flavour this means that the spins are anti-aligned resulting in a zero angular momentum final state. The isospin 1 final state is symmetric under the exchange in flavour and so the spins are aligned so the final state has a non-zero angular momentum. Thus the possible final isospin states are $0,2$ states.
+
+\subsection{Show that the operators $T_a=\sum_{x,\alpha,m,m'}{a_{x,m,\alpha}^{\dagger}[J_a^{j_x}]_{mm'}a_{x,m',\alpha}}$ have the commutation relations of isospin generators}
+\begin{align}
+[T_a,T_b]&=\sum_{x,\alpha,m,m',y,\beta,n,n'}[a_{x,m,\alpha}^{\dagger}[J_a^{j_x}]_{mm'}a_{x,m',\alpha},{a_{y,n,\beta}^{\dagger}[J_b^{j_y}]_{nn'}a_{y,n',\beta}}]\\
+&=\sum_{x,\alpha,m,m',y,\beta,n,n'}[J_a^{j_x}]_{mm'}[J_b^{j_y}]_{nn'}(a_{x,m,\alpha}^{\dagger}[a_{x,m',\alpha},{a_{y,n,\beta}^{\dagger}}a_{y,n',\beta}]\nonumber\\&\quad-[a^{\dagger}_{y,n,\beta}a_{y,n',\beta},a^{\dagger}_{x,m,\alpha}]a_{x,m',\alpha}).
+\end{align}
+Applying the commutation relations for bosons(-) and fermions(+) $[a_{x,m,\alpha},a^{\dagger}_{x',m',\alpha'}]_{\pm}=\delta_{mm'}\delta_{\alpha\alpha'}\delta_{xx'}$ with all others vanishing. Then for bosons we get
+\begin{align}
+[T_a,T_b]&=\sum_{x,\alpha,m,m',y,\beta,n,n'}[J_a^{j_x}]_{mm'}[J_b^{j_y}]_{nn'}(a_{x,m,\alpha}^{\dagger}\Big([a_{x,m',\alpha},a_{y,n,\beta}^{\dagger}]a_{y,n',\beta}+a^{\dagger}_{y,n,\beta}[a_{x,m',\alpha},a_{y,n,\beta}])\nonumber\\&\quad-(a_{yn\beta}^{\dagger}[a_{yn'\beta},a_{xm\alpha}^{\dagger}]+[a_{yn\beta}^{\dagger},a^{\dagger}_{xm\alpha}]a_{yn'\beta})a_{xm'\alpha}\Big)\\
+&=\sum_{x,\alpha,m,m',y,\beta,n,n'}[J_a^{j_x}]_{mm'}[J_b^{j_y}]_{nn'}(a_{x,m,\alpha}^{\dagger}a_{yn'\beta}\delta_{xy}\delta_{m'n}\delta_{\alpha\beta}-a_{y,n,\beta}^{\dagger}a_{xm'\alpha}\delta_{xy}\delta_{mn'}\delta_{\alpha\beta})\label{eqn:5commutator}
+\end{align}
+rearranging and relabelling \eqref{eqn:5commutator} we have
+\begin{align}
+[T_a,T_b]&=\sum_{\alpha,m,y,n,n'}(a_{y,m,\alpha}^{\dagger}a_{yn'\alpha}[J_a^{j_y}]_{mn}[J_b^{j_y}]_{nn'}-a_{y,m,\alpha}^{\dagger}a_{yn'\alpha}[J_b^{j_y}]_{mn}[J_a^{j_y}]_{nn'})\\
+&=\sum_{\alpha,m,y,n,n'}a_{y,m,\alpha}^{\dagger}[J_a^{j_y},J_b^{j_y}]_{mn'}a_{yn'\alpha}\\
+&=\sum_{\alpha,m,y,n,n'}a_{y,m,\alpha}^{\dagger}[J_c^{j_y}]_{mn'}a_{yn'\alpha}\\
+&=T_c.
+\end{align}
+Which is indeed the commutation relation of isospin generators, and by making use of the identity $[AB,C]=A\{B,C\}-\{A,C\}B$ the same relation can also be shown to be true for fermions. 
+
+\subsection{Decay probabilities}
+We have $\Delta^{++}, \Delta^{+}, \Delta^{0}, \Delta^{-}$ which live in the spin 3/2 isospin representation with third component of isospin $I_3=3/2,1/2,-1/2,-3/2$ respectively.
+We denote nucleons by $\left|P\right>=\left|1/2,1/2\right>$ and $\left|N\right>=\left|1/2,-1/2\right>$ and the pions $\left|\pi^+\right>=\left|1,1\right>$, $\left|\pi^0\right>=\left|1,0\right>$, $\left|\pi^-\right>=\left|1,-1\right>$.
+We decompose the $1/2\otimes1=3/2\oplus1/2$ states and can immediately see the probability of $\pi^+P\rightarrow\Delta^{++}$
+\begin{equation}\label{eqn:highestweightprotonpion}
+\left|P\pi^+\right>=\left|1/2,1/2\right>\left|1,1\right>=\left|3/2,3/2\right>.
+\end{equation}
+Therefore
+\begin{align}
+\text{Prob}(P\pi^+\rightarrow\Delta^{++})&=|\left<\Delta^{++}|P\pi^+\right>|^2\\
+&=|\left<3/2,3/2|3/2,3/2\right>|^2\\
+&=1.
+\end{align}
+To obtain the probability of $\pi^-P\rightarrow\Delta^0$ we apply lowering operators to the highest weight spin 3/2 state \eqref{eqn:highestweightprotonpion}
+\begin{align}
+\left|3/2,1/2\right>&=\sqrt{\frac{2}{3}}J^-\left|3/2,3/2\right>\\
+&=\sqrt{\frac{2}{3}}J^-(\left|1,1\right>\left|1/2,1/2\right>)\\
+&=\sqrt{\frac{2}{3}}(\left|1,0\right>\left|1/2,1/2\right>+\frac{1}{\sqrt{2}}\left|1,1\right>\left|1/2,-1/2\right>).
+\end{align}
+Then
+\begin{align}
+\left|\Delta^0\right>&=\left|3/2,-1/2\right>\\
+&=\frac{1}{\sqrt{2}}J^-\left|3/2,1/2\right>\\
+&=\frac{1}{\sqrt{3}}\left|1,-1\right>\left|1/2,1/2\right>+\sqrt{\frac{2}{3}}\left|1,0\right>\left|1/2,-1/2\right>
+\end{align}
+and the orthogonal $s=-1/2$ state living in the spin $1/2$ rep is given by $\left|v\right>\st\left<3/2,-1/2|v\right>=0$. Thus,
+\begin{equation}
+\left|1/2,-1/2\right>= \frac{1}{\sqrt{3}}\left|1,0\right>\left|1/2,-1/2\right> - \sqrt{\frac{2}{3}}\left|1,-1\right>\left|1/2,1/2\right>.
+\end{equation}
+Which gives the full
+\begin{align}
+\left|P\pi^-\right>&=\left|1/2,1/2\right>\left|1,-1\right>\\
+&=\frac{1}{\sqrt{3}}\left|3/2,-1/2\right>- \sqrt{\frac{2}{3}}\left|1/2,-1/2\right>.
+\end{align}
+Now we can obtain the probability
+\begin{align}
+\text{Prob}(P\pi^-\rightarrow\Delta^{0})&=|\left<\Delta^{0}|P\pi^-\right>|^2\\
+&=\left|\frac{1}{\sqrt{3}}\left<3/2,-1/2|3/2,-1/2\right>-\sqrt{\frac{2}{3}}\left<3/2,-1/2|1/2,-1/2\right>\right|^2\\
+&=\frac{1}{3}
+\end{align}
+\end{document}

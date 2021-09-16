@@ -1,0 +1,98 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
+\subsection{Calculate $A(6)$ and $A(10)$ in $\mathfrak{su}(3)$}
+We use the following relations
+\begin{align}
+A(\overline{D})=&-A(D)\\
+A(D_1\oplus D_2)=&A(D_1)+A(D_2)\\
+A(D_1\otimes D_2)=&\dim{(D_1)}A(D_2)+\dim{(D_2)}A(D_1)
+\end{align}
+and 
+\begin{align}
+3\otimes3&=6\oplus\overline{3}\\
+6\otimes3&=10\oplus8\\
+3\otimes\overline{3}&=8\oplus1.
+\end{align}
+
+\begin{equation}
+\Tr{\left[\{T_a^3,T_b^3\}T_c^3\right]}\equiv A(3)d_{abc}
+\end{equation}
+So that $A(3)=1$. Then,
+\begin{align}
+A(6)=&A(3\otimes3)-A(\overline{3})\\
+=&A(3\otimes3)+A(3)\\
+=&3A(3)+3A(3)+A(3)=7\\
+\end{align}
+
+For the $10$,
+\begin{align}
+A(10)=&A(6\otimes3)-A(8)\\
+=&6A(3)+3A(6)-A(8)\\
+=&6+21-A(8)
+\end{align}
+but the $8$ is anomaly-free ($A(8)=0$) because $8=\overline{8}$ so
+\begin{equation}
+A(8)=A(\overline{8})=-A(8)\implies A(8)=0.
+\end{equation}
+So
+\begin{equation}
+A(10)=27.
+\end{equation}
+\subsection{Show that the $A(10)_{\mathfrak{su}(5)}=A(5)_{\mathfrak{su}(5)}$ in $\mathfrak{su}(5)$}
+The anomaly of the fundamental representation of $\mathfrak{su}(N)$ may be calculated by calculating the $\mathfrak{su}(3)$ subalgebra of $\mathfrak{su}(N)$ under which the $N=[1]$
+ transforms like a single $3$ and $N-3$ singlets. 
+ 
+Under the $\mathfrak{su}(3)$ subalgebra the $5=[1]$ of $\mathfrak{su}(5)$
+\begin{equation}
+\young(\hfil)\rightarrow\young(\hfil)\oplus\bullet\oplus\bullet=3\oplus1\oplus1
+\end{equation}  
+which gives the anomaly $A(5)_{\mathfrak{su}(5)}=A(3)+A(1)+A(1)=1+0+0=1$.
+
+Under the $\mathfrak{su}(3)$ subalgebra the $10=[2]$ of $\mathfrak{su}(5)$ 
+\begin{equation}
+\young(\hfil,\hfil)\rightarrow\young(\hfil)\oplus\young(\hfil)\oplus\young(\hfil,\hfil)\oplus\bullet=3\oplus3\oplus\overline{3}\oplus1.
+\end{equation} 
+which gives the anomaly $A(10)_{\mathfrak{su}(5)}=2A(3)+A(\overline{3})+A(1)=2-1+0=1=A(5)_{\mathfrak{su}(5)}$. 
+
+\subsection{Prove $A(D_1\oplus D_2)=A(D_1)+A(D_2)$ and $A(D_1\otimes D_2)=\dim{(D_1)}A(D_1)+\dim{(D_2)}A(D_1)$}
+\begin{equation}
+\Tr{\left[\{T_a^{D_1\oplus D_2},T_b^{D_1\oplus D_2}\}T_c^{D_1\oplus D_2}\right]}\equiv A(D_1\oplus D_2)d_{abc}
+\end{equation}
+But, because $D_1\oplus D_2=\begin{pmatrix}D_1&0\\0&D_2\end{pmatrix}$. Thus the generators of $D_1\oplus D_2$ may be decomposed into independent generators $T_a^{D_1'},T_a^{D_2'}$ with dimension $\dim{(D_1\oplus D_2)}$ which act trivially on their respective invariant subspaces. So $D_1'=\begin{pmatrix}D_1&0\\0&0\end{pmatrix}$, $D_2'=\begin{pmatrix}0&0\\0&D_2\end{pmatrix}$ so that $T_a^{D_1'}\cdot T_b^{D_2'}=0$
+\begin{align}
+\Tr{\left[\{T_a^{D_1\oplus D_2},T_b^{D_1\oplus D_2}\}T_c^{D_1\oplus D_2}\right]}=&\Tr{\left[\{T_a^{D_1'}+T_a^{D_2'},T_b^{D_1'}+T_b^{D_2'}\}(T_c^{D_1'}+T_c^{D_2'})\right]}\\
+=&\Tr{\left[\{T_a^{D_1'},T_b^{D_1'}\}T_c^{D_1'}\right]}+\Tr{\left[\{T_a^{D_12'},T_b^{D_2'}\}T_c^{D_2'}\right]}\\
+=& A(D_1)d_{abc}+A(D_2)d_{abc}
+\end{align}
+because $\Tr{[D_1']}=\Tr{[D_1]}$ etc. So, 
+\begin{equation}
+A(D_1\oplus D_2)=A(D_1)+A(D_2)
+\end{equation}
+
+To prove $A(D_1\otimes D_2)=\dim{(D_1)}A(D_2)+\dim{(D_2)}A(D_1)$ we use the fact that $\Tr{[A\otimes B]}=\Tr{[A]}\Tr{[B]}$.
+
+We can decompose the generators
+\begin{equation}
+T_a^{D_1\otimes D_2}=T_a^{D_1}\otimes\mathbb{I}^{D_2}+\mathbb{I}^{D_1}\otimes T_a^{D_2}
+\end{equation}
+So, writing in the shorthand form: $T_a^{D_1}\otimes\mathbb{I}^{D_2}=T_a^{D_1}\mathbb{I}^{D_2}$,
+\begin{align}
+&\Tr{\left[\{T_a^{D_1\otimes D_2},T_b^{D_1\otimes D_2}\}T_c^{D_1\otimes D_2}\right]}\nonumber\\
+&=\Tr{\left(\{T_a^{D_1}\mathbb{I}^{D_2}+\mathbb{I}^{D_1} T_a^{D_2},T_b^{D_1}\mathbb{I}^{D_2}+\mathbb{I}^{D_1} T_b^{D_2}\}(T_c^{D_1}\mathbb{I}^{D_2}+\mathbb{I}^{D_1} T_c^{D_2})\right]}\\
+&=\Tr\Big[\left(\{T_a^{D_1}\mathbb{I}^{D_2},T_b^{D_1}\mathbb{I}^{D_2}\}+\{T_a^{D_1}\mathbb{I}^{D_2},\mathbb{I}^{D_1}T_b^{D_2}\}+\{\mathbb{I}^{D_1} T_a^{D_2},T_b^{D_1}\mathbb{I}^{D_2}\}+\{\mathbb{I}^{D_1} T_a^{D_2},\mathbb{I}^{D_1}T_b^{D_2}\}\right)\nonumber\\
+&\quad\cdot(T_c^{D_1}\mathbb{I}^{D_2}+\mathbb{I}^{D_1} T_c^{D_2})\Big]\\
+&=\Tr{\left[\{T_a^{D_1}\mathbb{I}^{D_2},T_b^{D_1}\mathbb{I}^{D_2}\}T_c^{D_1}\mathbb{I}^{D_2}+\{\mathbb{I}^{D_1} T_a^{D_2},\mathbb{I}^{D_1} T_b^{D_2}\}\mathbb{I}^{D_1} T_c^{D_2}\right]}\\
+&=\Tr{[\mathbb{I}^{D_2}]}\Tr{\left[\{T_a^{D_1},T_b^{D_1}\}T_c^{D_1}\right]}+\Tr{[\mathbb{I}^{D_1}]}\Tr{\left[\{T_a^{D_2},T_b^{D_2}\}T_c^{D_2}\right]}\\
+&=\dim{(D_2)}A(D_1)d_{abc}+\dim{(D_1)}A(D_2)d_{abc}
+\end{align}
+where the second from last line follows because terms such as
+\begin{align}
+\Tr{[\{T_a^{D_1}\mathbb{I}^{D_2},\mathbb{I}^{D_1}T_b^{D_2}\}T^{D_1}_c\mathbb{I}^{D_2}]}=2\Tr{[T_a^{D_1}T^{D_1}_cT_b^{D_2}]}=2\Tr{[T_a^{D_1}T^{D_1}_c]}\Tr{[T_b^{D_2}]}=0
+\end{align}
+ because of the fact that the generators are traceless $\Tr{[T_a^D]}=0$.
+ 
+ Therefore,
+ \begin{equation}
+ A(D_1\otimes D_2)=\dim{(D_1)}A(D_2)+\dim{(D_2)}A(D_1).
+ \end{equation}
+\end{document}
